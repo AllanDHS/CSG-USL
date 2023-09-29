@@ -13,7 +13,7 @@
 <div class="right-menu">
     <ul>
         <li><a href="#">Album Photos</a></li>
-        <li><a href="#">Boutique</a></li>
+        <li><a href="https://www.helloasso.com/associations/us-lillebonne-handball/boutiques/boutique-de-l-entente-usl-csg" target="_blank">Boutique</a></li>
         <li><a href="#">Le Club</a></li>
 
     </ul>
