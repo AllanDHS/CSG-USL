@@ -213,6 +213,27 @@
     </div>
 
 </div>
+<div class="actuHomePage">
+    <div class="title">
+        <a href="">
+            <p>nos dernière <br>Actualités</p>
+        </a>
+    </div>
+    <div class="containerActu">
+        <div class="Actu">
+            <p class="titleActu">Fête du sport </p>
+            <p class="textActu">Venez nous rejoindre a la fete du sport de notre dame de gravenchon le dimanche 3 septembre</p>
+        </div>
+        <div class="Actu">
+            <p class="titleActu">Fête du sport </p>
+            <p class="textActu">Venez nous rejoindre a la fete du sport de notre dame de gravenchon le dimanche 3 septembre</p>
+        </div>
+        <div class="Actu">
+            <p class="titleActu">Fête du sport </p>
+            <p class="textActu">Venez nous rejoindre a la fete du sport de notre dame de gravenchon le dimanche 3 septembre</p>
+        </div>
+    </div>
+</div>
 
 
 
@@ -243,5 +264,4 @@
 
 
 
-
-    <?php include "components/footer.php" ?>
+<?php include "components/footer.php" ?>
