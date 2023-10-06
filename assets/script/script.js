@@ -36,7 +36,7 @@ document.body.onload = function() {
 
     left.onclick = function() {
         clearInterval(autoSlideInterval); // Arrêtez le défilement automatique lorsque vous cliquez sur le bouton gauche
-
+        
         if (p < 0) {
             p++;
             container.style.transform = "translate(" + p * 1200 + "px)";
@@ -58,3 +58,15 @@ document.body.onload = function() {
         }
     }
 }
+
+// menu burger
+
+const burgerMenu = document.querySelector('.burger-menu');
+const leftMenu = document.querySelector('.left-menu');
+const rightMenu = document.querySelector('.right-menu');
+
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    leftMenu.classList.toggle('active');
+    rightMenu.classList.toggle('active');
+});

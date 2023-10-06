@@ -1,0 +1,21 @@
+
+.titleEquipes {
+    text-align: center;
+    font-size: 2em;
+    
+}
+
+.SectionMasc{
+    text-align: center;
+}
+
+.SectionMasc p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.custom-img-size {
+    width: 150px; /* Remplacez 100px par la taille souhaitée pour vos images */
+    height: 300px; /* Hauteur facultative */
+    object-fit: cover; /* Pour conserver les proportions de l'image */
+}
