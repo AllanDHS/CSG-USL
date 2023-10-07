@@ -5,12 +5,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 ">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 mx-0">
                 <li class="nav-item">
                     <a class="nav-link active text-light" href="#">Actualités</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Equipes</a>
+                    <a class="nav-link text-light" href="../controllers/controller-equipes.php">Equipes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Entrainements</a>

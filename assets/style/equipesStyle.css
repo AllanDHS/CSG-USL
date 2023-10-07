@@ -1,15 +1,20 @@
 
+/* Titre page Equipes */
 .titleEquipes {
     text-align: center;
     font-size: 2em;
+    margin-top: 1em;
     
 }
 
-.SectionMasc{
+/* Section masculins*/
+
+
+.sectionMasc{
     text-align: center;
 }
 
-.SectionMasc p {
+.sectionMasc p {
     font-size: 1.5em;
     margin-bottom: 1em;
 }
@@ -18,4 +23,42 @@
     width: 150px; /* Remplacez 100px par la taille souhaitée pour vos images */
     height: 300px; /* Hauteur facultative */
     object-fit: cover; /* Pour conserver les proportions de l'image */
+}
+
+/* Section Féminins*/
+
+.sectionFem{
+    text-align: center;
+}
+
+.sectionFem p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Section Loisirs*/
+
+.sectionLois{
+    text-align: center;
+}
+
+.sectionLois p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Section Ecole de hand*/
+
+.sectionEcole{
+    text-align: center;
+}
+
+.sectionEcole p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.titreSections {
+    font-weight: bold;
+    color: #0785d9;
 }
