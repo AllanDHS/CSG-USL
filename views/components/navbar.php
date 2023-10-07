@@ -13,15 +13,15 @@
                     <a class="nav-link text-light" href="../controllers/controller-equipes.php">Equipes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Entrainements</a>
+                    <a class="nav-link text-light" href="../controllers/controller-entrainement.php">Entrainements</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Nos Sponsors</a>
+                    <a class="nav-link text-light" href="../controllers/controller-sponsors.php">Nos Sponsors</a>
                 </li>
-                <a class="navbar-brand d-none d-md-block" href="#">
+                <a class="navbar-brand d-none d-md-block" href="../controllers/controller-home.php">
                     <img src="../assets/logo/Logo_CSG-1920w-removebg-preview.png" alt="" width="100">
                 </a>
-                <a class="navbar-brand d-none d-md-block" href="#">
+                <a class="navbar-brand d-none d-md-block" href="../controllers/controller-home.php">
                     <img src="../assets/logo/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129-removebg-preview.png" alt="" width="100">
                 </a>
                 <li class="nav-item">
