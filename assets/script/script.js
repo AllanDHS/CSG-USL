@@ -59,14 +59,3 @@ document.body.onload = function() {
     }
 }
 
-// menu burger
-
-const burgerMenu = document.querySelector('.burger-menu');
-const leftMenu = document.querySelector('.left-menu');
-const rightMenu = document.querySelector('.right-menu');
-
-burgerMenu.addEventListener('click', () => {
-    burgerMenu.classList.toggle('active');
-    leftMenu.classList.toggle('active');
-    rightMenu.classList.toggle('active');
-});
