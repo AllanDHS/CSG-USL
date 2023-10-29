@@ -37,9 +37,9 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Bureau</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Documents d'inscription</a></li>
+                        <li><a class="dropdown-item" href="#">Tarif des licences</a></li>
+                        <li><a class="dropdown-item" href="#">Arbitrage</a></li>
                     </ul>
                 </li>
 

@@ -14,109 +14,85 @@
         <img src="../assets/logo/icons8-vers-l'avant-100.png" alt="" class="button" id="right">
     </div>
 </div>
-
-<div class="resultHomePage">
+<div class="matchHomePage">
     <div class="title">
         <a href="">
-            <p>Résultats du <br>Week-end</p>
+            <p>Match a venir</p>
         </a>
     </div>
-    <div class="containerResult">
-        <div class="result">
-            <div class="topResult">
-                <p>18/02/2023</p>
-                <p>Sénior 1M</p>
-            </div>
-            <div class="centerResult">
-                <div class="equipe1">
-                    <img src="../assets/logo/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129-removebg-preview.png" alt="">
-                    <p>USL handball</p>
+<div class="container-fluid">
+        <div class="row mx-auto">
+            <div class="col-md-2 col-sm-5 col-5 red">
+                <div class="top">
+                    <p>Séniors 1M</p>
+                    <p>29/10/2023</p>
+                    <p>21H</p>
+                    <p>Salle Michel Ostermeyer</p>
+                    <p>Lillebonne</p>
                 </div>
-                <p>30</p>
-                <p>VS</p>
-                <p>30</p>
-                <div class="equipe2">
-                    <img src="../assets/logo/2017-06-30-f26906b4-1f76-4524-8bf2-2ba9a2774e41.webp" alt="">
-                    <p>countances </p>
+                <div class="center">
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 1" class="Logo1">
+                    <p class="mx-auto">VS</p>
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 2" class="Logo2">
                 </div>
-            </div>
-            <div class="bottomResult">
-                <p>Salle Ostemyer</p>
-                <p>Match de championnat</p>
-            </div>
-
-        </div>
-        <div class="result">
-            <div class="topResult">
-                <p>18/02/2023</p>
-                <p>Sénior 1M</p>
-            </div>
-            <div class="centerResult">
-                <div class="equipe1">
-                    <img src="../assets/logo/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129-removebg-preview.png" alt="">
-                    <p>USL handball</p>
-                </div>
-                <p>30</p>
-                <p>VS</p>
-                <p>30</p>
-                <div class="equipe2">
-                    <img src="../assets/logo/2017-06-30-f26906b4-1f76-4524-8bf2-2ba9a2774e41.webp" alt="">
-                    <p>countances </p>
+                <div class="bottom">
+                    <p>pré-national</p>
+                    <p></p>
                 </div>
             </div>
-            <div class="bottomResult">
-                <p>Salle Ostemyer</p>
-                <p>Match de championnat</p>
-            </div>
-        </div>
-        <div class="result">
-            <div class="topResult">
-                <p>18/02/2023</p>
-                <p>Sénior 1M</p>
-            </div>
-            <div class="centerResult">
-                <div class="equipe1">
-                    <img src="../assets/logo/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129-removebg-preview.png" alt="">
-                    <p>USL handball</p>
+            <div class="col-md-2 col-sm-5 col-5 red">
+                <div class="top">
+                    <p>Séniors 1M</p>
+                    <p>29/10/2023</p>
+                    <p>21H</p>
+                    <p>Salle Michel Ostermeyer</p>
+                    <p>Lillebonne</p>
                 </div>
-                <p>30</p>
-                <p>VS</p>
-                <p>30</p>
-                <div class="equipe2">
-                    <img src="../assets/logo/2017-06-30-f26906b4-1f76-4524-8bf2-2ba9a2774e41.webp" alt="">
-                    <p>countances </p>
+                <div class="center">
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 1" class="Logo1">
+                    <p class="mx-auto">VS</p>
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 2" class="Logo2">
+                </div>
+                <div class="bottom">
+                    <p>pré-national</p>
                 </div>
             </div>
-            <div class="bottomResult">
-                <p>Salle Ostemyer</p>
-                <p>Match de championnat</p>
-            </div>
-        </div>
-        <div class="result">
-            <div class="topResult">
-                <p>18/02/2023</p>
-                <p>Sénior 1M</p>
-            </div>
-            <div class="centerResult">
-                <div class="equipe1">
-                    <img src="../assets/logo/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129-removebg-preview.png" alt="">
-                    <p>USL handball</p>
+            <div class="col-md-2 col-sm-5 col-5 red">
+                <div class="top">
+                    <p>Séniors 1M</p>
+                    <p>29/10/2023</p>
+                    <p>21H</p>
+                    <p>Salle Michel Ostermeyer</p>
+                    <p>Lillebonne</p>
                 </div>
-                <p>30</p>
-                <p>VS</p>
-                <p>30</p>
-                <div class="equipe2">
-                    <img src="../assets/logo/2017-06-30-f26906b4-1f76-4524-8bf2-2ba9a2774e41.webp" alt="">
-                    <p>countances </p>
+                <div class="center">
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 1" class="Logo1">
+                    <p class="mx-auto">VS</p>
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 2" class="Logo2">
+                </div>
+                <div class="bottom">
+                    <p>pré-national</p>
                 </div>
             </div>
-            <div class="bottomResult">
-                <p>Salle Ostemyer</p>
-                <p>Match de championnat</p>
+            <div class="col-md-2 col-sm-5 col-5 red">
+                <div class="top">
+                    <p>Séniors 1M</p>
+                    <p>29/10/2023</p>
+                    <p>21H</p>
+                    <p>Salle Michel Ostermeyer</p>
+                    <p>Lillebonne</p>
+                </div>
+                <div class="center">
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 1" class="Logo1">
+                    <p class="mx-auto">VS</p>
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 2" class="Logo2">
+                </div>
+                <div class="bottom">
+                    <p>pré-national</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 <div class="matchHomePage">
     <div class="title">
@@ -124,90 +100,76 @@
             <p>Match a venir</p>
         </a>
     </div>
-    <div class="containerResult">
-        <div class="result">
-            <div class="topResult">
-                <p>18/02/2023</p>
-                <p>Sénior 1M</p>
-            </div>
-            <div class="centerResult">
-                <div class="equipe1">
-                    <img src="../assets/logo/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129-removebg-preview.png" alt="">
-                    <p>USL handball</p>
+    <div class="container-fluid">
+        <div class="row mx-auto">
+            <div class="col-md-2 col-sm-5 col-5 red">
+                <div class="top">
+                    <p>Séniors 1M</p>
+                    <p>29/10/2023</p>
+                    <p>21H</p>
+                    <p>Salle Michel Ostermeyer</p>
+                    <p>Lillebonne</p>
                 </div>
-                <p>VS</p>
-                <div class="equipe2">
-                    <img src="../assets/logo/2017-06-30-f26906b4-1f76-4524-8bf2-2ba9a2774e41.webp" alt="">
-                    <p>countances </p>
+                <div class="center">
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 1" class="Logo1">
+                    <p class="mx-auto">VS</p>
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 2" class="Logo2">
                 </div>
-            </div>
-            <div class="bottomResult">
-                <p>Salle Ostemyer</p>
-                <p>Match de championnat</p>
-            </div>
-
-        </div>
-        <div class="result">
-            <div class="topResult">
-                <p>18/02/2023</p>
-                <p>Sénior 1M</p>
-            </div>
-            <div class="centerResult">
-                <div class="equipe1">
-                    <img src="../assets/logo/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129-removebg-preview.png" alt="">
-                    <p>USL handball</p>
-                </div>
-                <p>VS</p>
-                <div class="equipe2">
-                    <img src="../assets/logo/2017-06-30-f26906b4-1f76-4524-8bf2-2ba9a2774e41.webp" alt="">
-                    <p>countances </p>
+                <div class="bottom">
+                    <p>pré-national</p>
+                    <p></p>
                 </div>
             </div>
-            <div class="bottomResult">
-                <p>Salle Ostemyer</p>
-                <p>Match de championnat</p>
-            </div>
-        </div>
-        <div class="result">
-            <div class="topResult">
-                <p>18/02/2023</p>
-                <p>Sénior 1M</p>
-            </div>
-            <div class="centerResult">
-                <div class="equipe1">
-                    <img src="../assets/logo/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129-removebg-preview.png" alt="">
-                    <p>USL handball</p>
+            <div class="col-md-2 col-sm-5 col-5 red">
+                <div class="top">
+                    <p>Séniors 1M</p>
+                    <p>29/10/2023</p>
+                    <p>21H</p>
+                    <p>Salle Michel Ostermeyer</p>
+                    <p>Lillebonne</p>
                 </div>
-                <p>VS</p>
-                <div class="equipe2">
-                    <img src="../assets/logo/2017-06-30-f26906b4-1f76-4524-8bf2-2ba9a2774e41.webp" alt="">
-                    <p>countances </p>
+                <div class="center">
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 1" class="Logo1">
+                    <p class="mx-auto">VS</p>
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 2" class="Logo2">
+                </div>
+                <div class="bottom">
+                    <p>pré-national</p>
                 </div>
             </div>
-            <div class="bottomResult">
-                <p>Salle Ostemyer</p>
-                <p>Match de championnat</p>
-            </div>
-        </div>
-        <div class="result">
-            <div class="topResult">
-                <p>18/02/2023</p>
-                <p>Sénior 1M</p>
-            </div>
-            <div class="centerResult">
-                <div class="equipe1">
-                    <img src="../assets/logo/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129-removebg-preview.png" alt="">
-                    <p>USL handball</p>
+            <div class="col-md-2 col-sm-5 col-5 red">
+                <div class="top">
+                    <p>Séniors 1M</p>
+                    <p>29/10/2023</p>
+                    <p>21H</p>
+                    <p>Salle Michel Ostermeyer</p>
+                    <p>Lillebonne</p>
                 </div>
-                <p>VS</p>
-                <div class="equipe2">
-                    <img src="../assets/logo/2017-06-30-f26906b4-1f76-4524-8bf2-2ba9a2774e41.webp" alt="">
-                    <p>countances </p>
+                <div class="center">
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 1" class="Logo1">
+                    <p class="mx-auto">VS</p>
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 2" class="Logo2">
+                </div>
+                <div class="bottom">
+                    <p>pré-national</p>
                 </div>
             </div>
-            <div class="bottomResult">
-                <p>Salle Ostemyer</p>
-                <p>Match de championnat</p>
+            <div class="col-md-2 col-sm-5 col-5 red">
+                <div class="top">
+                    <p>Séniors 1M</p>
+                    <p>29/10/2023</p>
+                    <p>21H</p>
+                    <p>Salle Michel Ostermeyer</p>
+                    <p>Lillebonne</p>
+                </div>
+                <div class="center">
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 1" class="Logo1">
+                    <p class="mx-auto">VS</p>
+                    <img src="Logo_CSG-1920w-removebg-preview.png" alt="Logo Equipe 2" class="Logo2">
+                </div>
+                <div class="bottom">
+                    <p>pré-national</p>
+                </div>
             </div>
         </div>
     </div>
