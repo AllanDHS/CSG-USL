@@ -9,6 +9,9 @@
      margin: 0;
      padding: 0;
      list-style-type: none;
+        text-decoration: none;
+        font-weight: normal;
+        font-family: 'Inter', sans-serif;
 
 
  }
@@ -17,7 +20,7 @@
 
  body {
      background-color: #ffffff35;
-     font-family: 'Inter', sans-serif;
+     
  }
 
  /* NavBar */
@@ -170,10 +173,15 @@
     padding: 1rem;
 }
 
+.score{
+    font-size: 30px;
+    font-weight: 900;
+    padding: 1rem;
+}
+
 .center img{
     width: 20%;
 }
-
 
 
 .bottom{
@@ -183,74 +191,43 @@
     padding-top: 1rem;
 }
 
- /* Section 2 */
 
 
 
-/* Section 3 */
 
-.actuHomePage {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    
-    
-}
 
-.actuHomePage .containerActu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-bottom: 50px;
-    
+
+
+/* Section Actus */
+
+.scoreContainer{
+    text-align: center;
+    padding: 1rem;
 }
 
 
-
-.actuHomePage .title {
-    font-size: 23px;
+.continue{
+    text-align: center;
     text-transform: uppercase;
-    text-align: left;
-    margin-left: 50px;
-    font-weight: 900;
-    padding-top: 20px;
+    padding-top: 1rem;
 }
 
-.actuHomePage .title a {
-    color: black;
+.scoreContainer a{
     text-decoration: none;
+    color: black;
     text-decoration: underline #0785D9;
 }
 
-.actuHomePage .Actu {
-    width: 30%;
-    height: 350px;
-    background-image: url(../image/PIS-sport-en-fete-2018.jpg);
-    border-radius: 15px;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.7);
-    position: relative;
+.scoreContainer a:hover{
+    color: #4b4c4d;
+    transition: all 0.5s ease;
+    transform: scale(1.1) ;
 }
 
-.actuHomePage .Actu .titleActu {
-    font-size: 30px;
-    font-weight: 900;
-    text-align: left;
-    
-}
 
-.actuHomePage .Actu .textActu{
-    font-size: 20px;
-    font-weight: 700;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    color: white;
-    border-radius: 0 0 15px 15px;
 
-}
+
+
 
 
 
@@ -264,6 +241,7 @@
     color:#4b4c4d;
     border-top:  3px solid #0785D9;
     margin-top: 10px;
+    width: @;
   }
   
   .footer-basic ul {
