@@ -1,3 +1,3 @@
 <?php
-include "../views/bureau.php.";
+include "../views/bureau.php";
 ?>
