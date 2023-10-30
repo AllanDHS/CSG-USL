@@ -43,7 +43,7 @@
             <div class="row align-items-center justify-content-center p-0">
                 <div class="col-md-4 ">
                     <div class="card mb-4" style="width: 25rem;">
-                        <img src="../assets/image/no-img.jpg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/-13g.jpeg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">-13 ans</h5>
                         </div>
