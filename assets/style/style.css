@@ -228,6 +228,15 @@
 
 
 
+.tableaux p{
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: #0785D9;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
 
 
 
@@ -241,7 +250,7 @@
     color:#4b4c4d;
     border-top:  3px solid #0785D9;
     margin-top: 10px;
-    width: @;
+    
   }
   
   .footer-basic ul {
