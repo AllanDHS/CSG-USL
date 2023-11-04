@@ -1,7 +1,7 @@
 <?php include "components/header.php" ?>
 <?php include "components/navbar.php" ?>
 
-<p class="fs-4 text-center text-capitalize lh-lg">connexion admin</p>
+<p class="fs-4 text-center text-capitalize lh-lg">connexion <br> admin</p>
 
 
 
