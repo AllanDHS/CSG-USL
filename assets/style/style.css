@@ -226,7 +226,7 @@
 
 
 
-
+/* Page Entrainements.php */
 
 .tableaux p{
     margin-top: 1rem;
@@ -236,10 +236,40 @@
     font-size: 20px;
 }
 
+/* Formulaire de connexion page adminconnexion.php */
+
+.containerForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    
+}
 
 
+.container input {
+    width: 300px;
+}
 
+.container .btn{
 
+    border: solid 1px #0785D9;
+
+}
+
+.container .btn:hover {
+    background: #0785D9;
+    color: #fff;
+    transition: all 0.5s ease;
+    font-size: large;
+    
+}
+
+.container input:focus {
+    border-bottom: 2px solid #0785D9;
+    transition: all 0.5s ease;
+    background: none;
+    outline: none !important;
+}
 
 
 
