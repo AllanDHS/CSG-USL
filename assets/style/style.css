@@ -273,6 +273,60 @@
 
 
 
+/* Page liste des matchs*/
+
+.btnModify {
+    background-color: #0785D9;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btnModify:hover {
+    background-color: #FFF;
+    color: #0785D9;
+    border: 1px solid #0785D9;
+    transition: all 0.5s ease;
+}
+
+.btnDelete {
+    background-color: #FF0000;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btnDelete:hover {
+    background-color: #FFF;
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    transition: all 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 .footer-basic {
     padding:30px 0;

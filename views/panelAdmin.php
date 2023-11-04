@@ -8,7 +8,7 @@
         </div>
         <div class="col-6">
             <button class="btn btn-primary my-md-2">Ajouter un Matchs</button>
-            <button class="btn btn-primary">Liste des Matchs</button>
+            <a href="../controllers/controller-listematch.php"><button class="btn btn-primary">Liste des Matchs</button></a>
         </div>
     </div>
     <div class="row m-4">
