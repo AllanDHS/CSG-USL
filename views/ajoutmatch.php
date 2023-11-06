@@ -64,9 +64,12 @@
                     <label for="equipe1" class="mb-2 text-uppercase">Equipe 1</label>
                     <select name="equipe1" class="form-control" id="equipe1">
                         <option value="" selected disabled>Choisissez l'équipe 1</option>
-                        <option value="">CSG/USL Handball</option>
-                        <option value="">Cany-barville</option>
-                        <option value="">Countances</option>
+
+                        <?php foreach (Equipe::getAllEquipes() as $equipe) { ?>
+
+                            <option value="<?= $equipe['equ_id'] ?>" <?= isset($_POST['equipe1']) && $_POST['equipe1'] == $equipe['equ_id'] ? 'selected' : '' ?>><?= ucfirst($equipe['equ_name']) ?> </option>
+
+                        <?php } ?>
                     </select>
                 </div>
             </div>
@@ -75,9 +78,13 @@
                     <label for="equipe1" class="mb-2 text-uppercase">Equipe 2</label>
                     <select name="equipe2" class="form-control" id="equipe2">
                         <option value="" selected disabled>Choisissez l'équipe 2</option>
-                        <option value="">CSG/USL Handball</option>
-                        <option value="">Cany-barville</option>
-                        <option value="">Countances</option>
+
+                        <?php foreach (Equipe::getAllEquipes() as $equipe) { ?>
+
+                            <option value="<?= $equipe['equ_id'] ?>" <?= isset($_POST['equipe2']) && $_POST['equipe2'] == $equipe['equ_id'] ? 'selected' : '' ?>><?= ucfirst($equipe['equ_name']) ?> </option>
+
+                        <?php } ?>
+
                     </select>
                 </div>
             </div>
