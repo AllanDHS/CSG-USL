@@ -4,6 +4,18 @@
 
 
 #------------------------------------------------------------
+# Table: equipes
+#------------------------------------------------------------
+
+CREATE TABLE equipes(
+        equ_id   Int  Auto_increment  NOT NULL ,
+        equ_name Varchar (50) NOT NULL ,
+        equ_logo Varchar (50) NOT NULL
+	,CONSTRAINT equipes_PK PRIMARY KEY (equ_id)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
 # Table: categories_equipes
 #------------------------------------------------------------
 
@@ -11,21 +23,6 @@ CREATE TABLE categories_equipes(
         cat_id   Int  Auto_increment  NOT NULL ,
         cat_name Varchar (50) NOT NULL
 	,CONSTRAINT categories_equipes_PK PRIMARY KEY (cat_id)
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: equipes
-#------------------------------------------------------------
-
-CREATE TABLE equipes(
-        equ_id   Int  Auto_increment  NOT NULL ,
-        equ_name Varchar (50) NOT NULL ,
-        equ_logo Varchar (50) NOT NULL ,
-        cat_id   Int NOT NULL
-	,CONSTRAINT equipes_PK PRIMARY KEY (equ_id)
-
-	,CONSTRAINT equipes_categories_equipes_FK FOREIGN KEY (cat_id) REFERENCES categories_equipes(cat_id)
 )ENGINE=InnoDB;
 
 
@@ -48,10 +45,12 @@ CREATE TABLE matchs(
         mat_id    Int  Auto_increment  NOT NULL ,
         mat_date  Date NOT NULL ,
         mat_place Varchar (50) NOT NULL ,
-        com_id    Int NOT NULL
+        com_id    Int NOT NULL ,
+        cat_id    Int NOT NULL
 	,CONSTRAINT matchs_PK PRIMARY KEY (mat_id)
 
 	,CONSTRAINT matchs_competitions_FK FOREIGN KEY (com_id) REFERENCES competitions(com_id)
+	,CONSTRAINT matchs_categories_equipes0_FK FOREIGN KEY (cat_id) REFERENCES categories_equipes(cat_id)
 )ENGINE=InnoDB;
 
 
