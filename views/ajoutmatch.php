@@ -35,16 +35,7 @@
                     <label for="categories" class="mb-2 text-uppercase">Catégories</label>
                     <select name="categories" class="form-control" id="categories">
                         <option value="" selected disabled>Choisissez une catégorie</option>
-                        <option value="1">U7</option>
-                        <option value="2">U9</option>
-                        <option value="3">U11</option>
-                        <option value="4">U13</option>
-                        <option value="5">U15</option>
-                        <option value="6">U17</option>
-                        <option value="7">U19</option>
-                        <option value="8">U21</option>
-                        <option value="9">Senior</option>
-                        <option value="10">Vétéran</option>
+                        
                     </select>
                 </div>
             </div>
