@@ -6,6 +6,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 mx-0">
+            <li class="nav-item">
+                    
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active text-light" href="../controllers/controller-home.php">Accueil</a>
                 </li>
@@ -40,6 +43,7 @@
                         <li><a class="dropdown-item" href="#">Documents d'inscription</a></li>
                         <li><a class="dropdown-item" href="#">Tarif des licences</a></li>
                         <li><a class="dropdown-item" href="#">Arbitrage</a></li>
+                        <li><a class="dropdown-item" href="../controllers/controller-paneladmin.php">Panel Admin</a></li>
                     </ul>
                 </li>
 

@@ -7,7 +7,7 @@
             <p class="fs-4 text-uppercase">Panel Admin</p>
         </div>
         <div class="col-6">
-            <button class="btn btn-primary my-md-2">Ajouter un Matchs</button>
+            <a href="../controllers/controller-ajoutmatch.php"><button class="btn btn-primary my-md-2">Ajouter un Matchs</button></a>
             <a href="../controllers/controller-listematch.php"><button class="btn btn-primary">Liste des Matchs</button></a>
         </div>
     </div>
