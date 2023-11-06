@@ -35,7 +35,11 @@
                     <label for="categories" class="mb-2 text-uppercase">Catégories</label>
                     <select name="categories" class="form-control" id="categories">
                         <option value="" selected disabled>Choisissez une catégorie</option>
-                        
+
+                        <?php foreach (Categories::getAllCategories() as $categorie) { ?>
+
+                            <option value="<?= $categorie['cat_id'] ?>" <?= isset($_POST['categories']) && $_POST['categories'] == $categorie['cat_id'] ? 'selected' : '' ?>><?= ucfirst($categorie['cat_name']) ?> </option>
+                        <?php } ?>
                     </select>
                 </div>
             </div>
@@ -44,9 +48,12 @@
                     <label for="competitions" class="mb-2 text-uppercase">compétitions</label>
                     <select name="competitions" class="form-control" id="competitions">
                         <option value="" selected disabled>Choisissez une compétitions</option>
-                        <option value="">+16M prénationale</option>
-                        <option value="">+16M régionale honneur</option>
-                        <option value="">+16F prénationale</option>
+
+                        <?php foreach (Competitions::getAllCompetitions() as $competition) { ?>
+
+                            <option value="<?= $competition['com_id'] ?>" <?= isset($_POST['competitions']) && $_POST['competitions'] == $competition['com_id'] ? 'selected' : '' ?>><?= ucfirst($competition['com_name']) ?> </option>
+                        <?php } ?>
+
                     </select>
                 </div>
             </div>
