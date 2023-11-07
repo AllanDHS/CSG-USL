@@ -59,13 +59,14 @@ class Matchs
 
             // Requête préparée pour récupérer tous les matchs
             $sql = 'SELECT 
-                    `mat_place`,`com_name`,`cat_name`,`mat_date`,
+                    `mat_place`,`com_name`,`cat_name`,`mat_date`,`mat_id`,
                     GROUP_CONCAT(`equipes`.`equ_name`
                      SEPARATOR "-") AS `equipes` FROM `equipes_match`
                     NATURAL JOIN `matchs`
                     NATURAL JOIN `competitions`
                     NATURAL JOIN `equipes`
                     NATURAL JOIN `categories_equipes`
+                    GROUP BY `mat_id`
                     ORDER BY `mat_date` ASC';
 
 
@@ -73,10 +74,10 @@ class Matchs
             $stmt = $pdo->query($sql);
 
             // Exécution de la requête
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $match = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             // Retourne le tableau contenant tous les matchs
-            return $result;
+            return $match;
         } catch (PDOException $e) {
             echo "Erreur : " . $e->getMessage();
         }

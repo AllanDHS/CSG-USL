@@ -23,7 +23,7 @@
                 <tr>
                     <th scope="row"><?= $match ['mat_id']?></th>
                     <td><?= htmlspecialchars($match['mat_date']); ?></td>
-                    <td><?= htmlspecialchars($match['equ_name']); ?></td>
+                    <td><?= htmlspecialchars($match['equipes']); ?></td>
                     <td><?= htmlspecialchars($match['com_name']); ?></td>
                     <td><?= htmlspecialchars($match['cat_name']); ?></td>
                     <td><?= htmlspecialchars($match['mat_place']); ?></td>
