@@ -11,20 +11,20 @@
 
 
 <form action="#" method="post">
-
+<?php if ($showForm) { ?>
     <div class="container text-center mx-auto p-2">
         <div class="row mb-3">
             <div class="col">
                 <div class="form-group ">
-                    <label for="date_match" class="mb-2 text-uppercase">Date et heure</label>
-                    <input type="datetime-local" class="form-control classMargin" name="date_match" id="date_match">
+                    <label for="mat_date" class="mb-2 text-uppercase">Date et heure</label>
+                    <input type="datetime-local" class="form-control classMargin" name="mat_date" id="mat_date">
                     <span><?= $errors['date'] ?? "" ?></span>
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
-                    <label for="lieu_match" class="mb-2 text-uppercase">Lieu</label>
-                    <input type="text" class="form-control classMargin" name="lieu_match" id="lieu_match">
+                    <label for="mat_place" class="mb-2 text-uppercase">Lieu</label>
+                    <input type="text" class="form-control classMargin" name="mat_place" id="mat_place">
                     <span><?= $errors['lieu'] ?? "" ?></span>
                 </div>
             </div>
@@ -32,8 +32,8 @@
         <div class="row mb-3">
             <div class="col">
                 <div class="form-group">
-                    <label for="categories" class="mb-2 text-uppercase">Catégories</label>
-                    <select name="categories" class="form-control" id="categories">
+                    <label for="cat_id" class="mb-2 text-uppercase">Catégories</label>
+                    <select name="cat_id" class="form-control" id="cat_id">
                         <option value="" selected disabled>Choisissez une catégorie</option>
 
                         <?php foreach (Categories::getAllCategories() as $categorie) { ?>
@@ -45,8 +45,8 @@
             </div>
             <div class="col">
                 <div class="from-group">
-                    <label for="competitions" class="mb-2 text-uppercase">compétitions</label>
-                    <select name="competitions" class="form-control" id="competitions">
+                    <label for="com_id" class="mb-2 text-uppercase">compétitions</label>
+                    <select name="com_id" class="form-control" id="com_id">
                         <option value="" selected disabled>Choisissez une compétitions</option>
 
                         <?php foreach (Competitions::getAllCompetitions() as $competition) { ?>
@@ -61,8 +61,8 @@
         <div class="row mb-3">
             <div class="col">
                 <div class="form-group">
-                    <label for="equipe1" class="mb-2 text-uppercase">Equipe 1</label>
-                    <select name="equipe1" class="form-control" id="equipe1">
+                    <label for="equ_id" class="mb-2 text-uppercase">Equipe 1</label>
+                    <select name="equ_id" class="form-control" id="equ_id">
                         <option value="" selected disabled>Choisissez l'équipe 1</option>
 
                         <?php foreach (Equipe::getAllEquipes() as $equipe) { ?>
@@ -75,8 +75,8 @@
             </div>
             <div class="col">
                 <div class="form-group">
-                    <label for="equipe1" class="mb-2 text-uppercase">Equipe 2</label>
-                    <select name="equipe2" class="form-control" id="equipe2">
+                    <label for="equ_id" class="mb-2 text-uppercase">Equipe 2</label>
+                    <select name="equ_id" class="form-control" id="equ_id">
                         <option value="" selected disabled>Choisissez l'équipe 2</option>
 
                         <?php foreach (Equipe::getAllEquipes() as $equipe) { ?>
@@ -96,6 +96,6 @@
         <a href="../controllers/controller-paneladmin.php" class="btnDelete">Annuler</a>
     </div>
 
-
+    <?php } else { ?>
 
 </form>

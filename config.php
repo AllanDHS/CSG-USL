@@ -3,7 +3,7 @@
 
 // Définition des constantes de connexion à la base de données
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'csg_usl');
+define('DB_NAME', 'csg_usl_handball');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
 

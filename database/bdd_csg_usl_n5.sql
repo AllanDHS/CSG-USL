@@ -107,30 +107,20 @@ CREATE TABLE admin(
 
 
 #------------------------------------------------------------
-# Table: score
+# Table: battle
 #------------------------------------------------------------
 
-CREATE TABLE score(
-        mat_id       Int NOT NULL ,
-        equ_id       Int NOT NULL ,
-        score_equipe Int NOT NULL
-	,CONSTRAINT score_PK PRIMARY KEY (mat_id,equ_id)
+CREATE TABLE battle(
+        bat_id         Int  Auto_increment  NOT NULL ,
+        score_equipe1  Int ,
+        score_equipe2  Int ,
+        mat_id         Int NOT NULL ,
+        equ_id         Int NOT NULL ,
+        equ_id_equipes Int NOT NULL
+	,CONSTRAINT battle_PK PRIMARY KEY (bat_id)
 
-	,CONSTRAINT score_matchs_FK FOREIGN KEY (mat_id) REFERENCES matchs(mat_id)
-	,CONSTRAINT score_equipes0_FK FOREIGN KEY (equ_id) REFERENCES equipes(equ_id)
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: HAVE
-#------------------------------------------------------------
-
-CREATE TABLE HAVE(
-        mat_id Int NOT NULL ,
-        equ_id Int NOT NULL
-	,CONSTRAINT HAVE_PK PRIMARY KEY (mat_id,equ_id)
-
-	,CONSTRAINT HAVE_matchs_FK FOREIGN KEY (mat_id) REFERENCES matchs(mat_id)
-	,CONSTRAINT HAVE_equipes0_FK FOREIGN KEY (equ_id) REFERENCES equipes(equ_id)
+	,CONSTRAINT battle_matchs_FK FOREIGN KEY (mat_id) REFERENCES matchs(mat_id)
+	,CONSTRAINT battle_equipes0_FK FOREIGN KEY (equ_id) REFERENCES equipes(equ_id)
+	,CONSTRAINT battle_equipes1_FK FOREIGN KEY (equ_id_equipes) REFERENCES equipes(equ_id)
 )ENGINE=InnoDB;
 

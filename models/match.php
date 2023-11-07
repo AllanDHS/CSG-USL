@@ -25,10 +25,11 @@ class Matchs
 
 
             // Requête préparée pour insérer les données dans la table matchs
-            $sql = "INSERT INTO `matchs` (`mat_date`, `mat_place`, `com_id`, `cat_id`) VALUES (:mat_date, :mat_place, :com_id, :cat_id)";
+            $insertmatch = "INSERT INTO `matchs` (`mat_date`, `mat_place`, `com_id`, `cat_id`) VALUES (:mat_date, :mat_place, :com_id, :cat_id)";
+            $insertequipe = "INSERT INTO `equipes_match` (`mat_id`, `equ_id`) VALUES (:mat_id, :equ_id)";
 
             // Préparation de la requête
-            $stmt = $pdo->prepare($sql);
+            $stmt = $pdo->prepare($insertmatch, $insertequipe);
 
             // Association des valeurs aux paramètres de la requête préparée
             $stmt->bindValue(':mat_date', $inputs['date_match'], PDO::PARAM_STR);
@@ -59,15 +60,18 @@ class Matchs
 
             // Requête préparée pour récupérer tous les matchs
             $sql = 'SELECT 
-                    `mat_place`,`com_name`,`cat_name`,`mat_date`,`mat_id`,
-                    GROUP_CONCAT(`equipes`.`equ_name`
-                     SEPARATOR "-") AS `equipes` FROM `equipes_match`
-                    NATURAL JOIN `matchs`
-                    NATURAL JOIN `competitions`
-                    NATURAL JOIN `equipes`
-                    NATURAL JOIN `categories_equipes`
-                    GROUP BY `mat_id`
-                    ORDER BY `mat_date` ASC';
+                    *
+                FROM
+                `battle`
+                 NATURAL JOIN
+                `matchs`
+                NATURAL JOIN
+                `competitions`
+                NATURAL JOIN
+                `categories_equipes`
+                WHERE
+                `score_equipe1` IS NULL
+                AND `score_equipe2` IS NULL';
 
 
             // Préparation de la requête

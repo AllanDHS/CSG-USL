@@ -10,7 +10,8 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Date et heures</th>
-                    <th scope="col">Equipes</th>
+                    <th scope="col">Equipes1</th>
+                    <th scope="col">Equipes2</th>
                     <th scope="col">Compétitions</th>
                     <th scope="col">Catégories</th>
                     <th scope="col">Lieu</th>
@@ -23,7 +24,8 @@
                 <tr>
                     <th scope="row"><?= $match ['mat_id']?></th>
                     <td><?= htmlspecialchars($match['mat_date']); ?></td>
-                    <td><?= htmlspecialchars($match['equipes']); ?></td>
+                    <td><?= htmlspecialchars(Equipe::getEquipesInfo($match['equ_id'])['equ_name']); ?></td>
+                    <td><?= htmlspecialchars(Equipe::getEquipesInfo($match['equ_id_equipes'])['equ_name']); ?></td>
                     <td><?= htmlspecialchars($match['com_name']); ?></td>
                     <td><?= htmlspecialchars($match['cat_name']); ?></td>
                     <td><?= htmlspecialchars($match['mat_place']); ?></td>
@@ -40,8 +42,8 @@
     </div>
 </div>
 <div class="text-center mt-5">
-        <a href="../controllers/controller-ajoutmatch.php" class="btnModify">Ajouter un match</a>
-        <a href="../controllers/controller-paneladmin.php" class="btnDelete">Annuler</a>
+        <a href="../controllers/controller-ajoutmatch.php"><button class="btnModify">Ajouter un match</button></a>
+        <a href="../controllers/controller-paneladmin.php"><button class="btnDelete">Annuler</button></a>
     </div>
 
 
