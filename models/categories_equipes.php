@@ -4,7 +4,7 @@ class Categories
 {
 
 
-    // Nus allons créer les propriétés de l'objet en fonction des champs de la table categories_equipes
+    // Nous allons créer les propriétés de l'objet en fonction des champs de la table categories_equipes
     private $cat_id;
     private $cat_name;
 

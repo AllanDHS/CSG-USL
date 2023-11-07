@@ -95,6 +95,18 @@ CREATE TABLE actualites(
 
 
 #------------------------------------------------------------
+# Table: admin
+#------------------------------------------------------------
+
+CREATE TABLE admin(
+        adm_id       Int  Auto_increment  NOT NULL ,
+        adm_login    Varchar (50) NOT NULL ,
+        adm_password Varchar (255) NOT NULL
+	,CONSTRAINT admin_PK PRIMARY KEY (adm_id)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
 # Table: score
 #------------------------------------------------------------
 
@@ -106,5 +118,19 @@ CREATE TABLE score(
 
 	,CONSTRAINT score_matchs_FK FOREIGN KEY (mat_id) REFERENCES matchs(mat_id)
 	,CONSTRAINT score_equipes0_FK FOREIGN KEY (equ_id) REFERENCES equipes(equ_id)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: HAVE
+#------------------------------------------------------------
+
+CREATE TABLE HAVE(
+        mat_id Int NOT NULL ,
+        equ_id Int NOT NULL
+	,CONSTRAINT HAVE_PK PRIMARY KEY (mat_id,equ_id)
+
+	,CONSTRAINT HAVE_matchs_FK FOREIGN KEY (mat_id) REFERENCES matchs(mat_id)
+	,CONSTRAINT HAVE_equipes0_FK FOREIGN KEY (equ_id) REFERENCES equipes(equ_id)
 )ENGINE=InnoDB;
 

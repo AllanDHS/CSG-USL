@@ -9,26 +9,24 @@
             <thead class="table-light">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Equipe 1</th>
-                    <th scope="col">Equipe 2</th>
-                    <th scope="col">Score 1</th>
-                    <th scope="col">Score 2</th>
+                    <th scope="col">Date et heures</th>
+                    <th scope="col">Equipes</th>
                     <th scope="col">Compétitions</th>
+                    <th scope="col">Catégories</th>
                     <th scope="col">Lieu</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
+                <?php foreach (Matchs::getAllMatchs() as $match) : ?>
                 <tr>
-                    <th scope="row"></th>
-                    <td>CSG Handball</td>
-                    <td>Montivilliers</td>
-                    <td>49</td>
-                    <td>20</td>
-                    <td>+16M prénat</td>
-                    <td>Salle michel ostermeyer</td>
-                    <td></td>
+                    <th scope="row"><?= $match ['mat_id']?></th>
+                    <td><?= htmlspecialchars($match['mat_date']); ?></td>
+                    <td><?= htmlspecialchars($match['equ_name']); ?></td>
+                    <td><?= htmlspecialchars($match['com_name']); ?></td>
+                    <td><?= htmlspecialchars($match['cat_name']); ?></td>
+                    <td><?= htmlspecialchars($match['mat_place']); ?></td>
                     <td>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <a href="#"><button class="btnModify">Modifier</button></a>
@@ -36,11 +34,13 @@
                         </div>
                     </td>
                 </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
 </div>
 <div class="text-center mt-5">
+        <a href="../controllers/controller-ajoutmatch.php" class="btnModify">Ajouter un match</a>
         <a href="../controllers/controller-paneladmin.php" class="btnDelete">Annuler</a>
     </div>
 

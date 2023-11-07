@@ -16,9 +16,10 @@ class Matchs
      * @param array $inputs tableau contenant les données du formulaire
      * @return bool Retourne true si l'animal a bien été ajouté, sinon false
      */
-    public function addMatch(array $inputs): bool{
+    public function addMatch(array $inputs): bool
+    {
 
-        try{
+        try {
             // Création d'une instance de connexion à la base de données
             $pdo = Database::createInstancePDO();
 
@@ -38,8 +39,7 @@ class Matchs
 
             // Exécution de la requête préparée
             $stmt->execute();
-
-        }catch (PDOException $e){
+        } catch (PDOException $e) {
             // echo "Erreur : " . $e->getMessage();
             return false;
         }
@@ -53,16 +53,21 @@ class Matchs
     public static function getAllMatchs(): array
     {
 
-        try{
+        try {
             // création d'une instance PDO
             $pdo = Database::createInstancePDO();
 
             // Requête préparée pour récupérer tous les matchs
-            $sql = 'SELECT * FROM `matchs`
-                    INNER JOIN `categories_equipes` ON `matchs`.`cat_id` = `categories_equipes`.`cat_id`
-                    INNER JOIN `competitions` ON `matchs`.`com_id` = `competitions`.`com_id`
-                    INNER JOIN `equipes` ON `matchs`.`equipe1` = `equipes`.`equ_id`
-                    INNER JOIN `equipes` ON `matchs`.`equipe2` = `equipes`.`equ_id`';
+            $sql = 'SELECT 
+                    `mat_place`,`com_name`,`cat_name`,`mat_date`,
+                    GROUP_CONCAT(`equipes`.`equ_name`
+                     SEPARATOR "-") AS `equipes` FROM `equipes_match`
+                    NATURAL JOIN `matchs`
+                    NATURAL JOIN `competitions`
+                    NATURAL JOIN `equipes`
+                    NATURAL JOIN `categories_equipes`
+                    ORDER BY `mat_date` ASC';
+
 
             // Préparation de la requête
             $stmt = $pdo->query($sql);
@@ -72,12 +77,8 @@ class Matchs
 
             // Retourne le tableau contenant tous les matchs
             return $result;
-
-        }catch (PDOException $e){
+        } catch (PDOException $e) {
             echo "Erreur : " . $e->getMessage();
         }
     }
-
-
-
 }
