@@ -10,6 +10,8 @@ class Matchs
     private string $mat_place;
     private int $com_id;
     private int $cat_id;
+    private int $equ_id;
+    private int $equ_id_equipes;
 
     /**
      * Ajouter un match dans la base de données
@@ -26,20 +28,25 @@ class Matchs
 
             // Requête préparée pour insérer les données dans la table matchs
             $insertmatch = "INSERT INTO `matchs` (`mat_date`, `mat_place`, `com_id`, `cat_id`) VALUES (:mat_date, :mat_place, :com_id, :cat_id)";
-            $insertequipe = "INSERT INTO `equipes_match` (`mat_id`, `equ_id`) VALUES (:mat_id, :equ_id)";
-
+            $idmatch = $pdo->lastInsertId();
+            $insertequipe = "INSERT INTO `battle` (`mat_id`, `equ_id`,`equ_id_equipes`) VALUES (:mat_id, :equ_id, :equ_id_equipes)";
+            
             // Préparation de la requête
-            $stmt = $pdo->prepare($insertmatch, $insertequipe);
-
+            $stmtmatch = $pdo->prepare($insertmatch);
+            $stmtmatch->bindValue(':mat_date', $inputs['mat_date'], PDO::PARAM_STR);
+            $stmtmatch->bindValue(':mat_place', $inputs['mat_place'], PDO::PARAM_STR);
+            $stmtmatch->bindValue(':com_id', $inputs['com_id'], PDO::PARAM_INT);
+            $stmtmatch->bindValue(':cat_id', $inputs['cat_id'], PDO::PARAM_INT);
+            $stmtmatch->execute();
+            $idmatch = $pdo->lastInsertId();
             // Association des valeurs aux paramètres de la requête préparée
-            $stmt->bindValue(':mat_date', $inputs['date_match'], PDO::PARAM_STR);
-            $stmt->bindValue(':mat_place', $inputs['lieu'], PDO::PARAM_STR);
-            $stmt->bindValue(':com_id', $inputs['competitions'], PDO::PARAM_INT);
-            $stmt->bindValue(':cat_id', $inputs['categories'], PDO::PARAM_INT);
-
-
+            $stmtequipe = $pdo->prepare($insertequipe);
+            $stmtequipe->bindValue(':mat_id', $idmatch, PDO::PARAM_INT);
+            $stmtequipe->bindValue(':equ_id', $inputs['equ_id'], PDO::PARAM_INT);
+            $stmtequipe->bindValue(':equ_id_equipes', $inputs['equ_id_equipes'], PDO::PARAM_INT);
             // Exécution de la requête préparée
-            $stmt->execute();
+            $stmtequipe->execute();
+            return true;
         } catch (PDOException $e) {
             // echo "Erreur : " . $e->getMessage();
             return false;
@@ -86,4 +93,36 @@ class Matchs
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+    /**
+     * Suppression d'un match
+     * @param int $id identifiant du match à supprimer
+     * @return bool Retourne true si le match a bien été supprimé, sinon false
+     */
+    public static function deleteMatch(int $id): bool{
+            
+            try {
+                // Création d'une instance PDO
+                $pdo = Database::createInstancePDO();
+    
+                // Requête préparée pour supprimer un match
+                $sql = "DELETE FROM `matchs` WHERE `mat_id` = :id";
+    
+                // Préparation de la requête
+                $stmt = $pdo->prepare($sql);
+    
+                // Association des valeurs aux paramètres de la requête préparée
+                $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    
+                // Exécution de la requête préparée
+                $stmt->execute();
+    
+                // Retourne true si le match a bien été supprimé
+                return true;
+            } catch (PDOException $e) {
+                // echo "Erreur : " . $e->getMessage();
+                return false;
+            }
+    }
+
 }

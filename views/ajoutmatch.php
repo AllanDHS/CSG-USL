@@ -18,14 +18,14 @@
                 <div class="form-group ">
                     <label for="mat_date" class="mb-2 text-uppercase">Date et heure</label>
                     <input type="datetime-local" class="form-control classMargin" name="mat_date" id="mat_date">
-                    <span><?= $errors['date'] ?? "" ?></span>
+                    <span class="text-danger fs-5"><?= $errors['mat_date'] ?? "" ?></span>
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="mat_place" class="mb-2 text-uppercase">Lieu</label>
                     <input type="text" class="form-control classMargin" name="mat_place" id="mat_place">
-                    <span><?= $errors['lieu'] ?? "" ?></span>
+                    <span class="text-danger fs-5"><?= $errors['mat_place'] ?? "" ?></span>
                 </div>
             </div>
         </div>
@@ -41,6 +41,7 @@
                             <option value="<?= $categorie['cat_id'] ?>" <?= isset($_POST['categories']) && $_POST['categories'] == $categorie['cat_id'] ? 'selected' : '' ?>><?= ucfirst($categorie['cat_name']) ?> </option>
                         <?php } ?>
                     </select>
+                    <span class="text-danger fs-5"><?= $errors['cat_id'] ?? "" ?></span>
                 </div>
             </div>
             <div class="col">
@@ -55,6 +56,7 @@
                         <?php } ?>
 
                     </select>
+                    <span class="text-danger fs-5"><?= $errors['com_id'] ?? "" ?></span>
                 </div>
             </div>
         </div>
@@ -71,12 +73,13 @@
 
                         <?php } ?>
                     </select>
+                    <span class="text-danger fs-5"><?= $errors['equ_id'] ?? "" ?></span>
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
-                    <label for="equ_id" class="mb-2 text-uppercase">Equipe 2</label>
-                    <select name="equ_id" class="form-control" id="equ_id">
+                    <label for="equ_id_equipes" class="mb-2 text-uppercase">Equipe 2</label>
+                    <select name="equ_id_equipes" class="form-control" id="equ_id_equipes">
                         <option value="" selected disabled>Choisissez l'équipe 2</option>
 
                         <?php foreach (Equipe::getAllEquipes() as $equipe) { ?>
@@ -86,6 +89,7 @@
                         <?php } ?>
 
                     </select>
+                    <span class="text-danger fs-5"><?= $errors['equ_id_equipes'] ?? "" ?></span>
                 </div>
             </div>
         </div>
@@ -97,5 +101,7 @@
     </div>
 
     <?php } else { ?>
-
+        <p class="text-success fs-2 text-center text-uppercase mt-5">Le match a bien été ajouté</p>
+        <a href="../controllers/controller-home.php" class="btnModify">retour</a>
+    <?php } ?>
 </form>

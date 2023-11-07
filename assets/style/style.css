@@ -275,7 +275,7 @@
 
 /* Page liste des matchs*/
 
-.btnModify {
+.btnModify  {
     background-color: #0785D9;
     color: #FFF;
     border: none;
@@ -284,7 +284,12 @@
     margin: 0 5px;
     cursor: pointer;
     transition: all 0.5s ease;
+    text-decoration: none;
 }
+
+
+
+
 
 .btnModify:hover {
     background-color: #FFF;
