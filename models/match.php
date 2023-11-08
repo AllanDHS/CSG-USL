@@ -106,13 +106,13 @@ class Matchs
                 $pdo = Database::createInstancePDO();
     
                 // Requête préparée pour supprimer un match
-                $sql = "DELETE FROM `matchs` WHERE `mat_id` = :id";
+                $sql = "DELETE FROM `battle` WHERE `mat_id` = :mat_id";
     
                 // Préparation de la requête
                 $stmt = $pdo->prepare($sql);
     
                 // Association des valeurs aux paramètres de la requête préparée
-                $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+                $stmt->bindValue(':mat_id', $id, PDO::PARAM_INT);
     
                 // Exécution de la requête préparée
                 $stmt->execute();
@@ -120,7 +120,7 @@ class Matchs
                 // Retourne true si le match a bien été supprimé
                 return true;
             } catch (PDOException $e) {
-                // echo "Erreur : " . $e->getMessage();
+                echo "Erreur : " . $e->getMessage();
                 return false;
             }
     }

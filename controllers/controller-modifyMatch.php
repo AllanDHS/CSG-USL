@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 
 require_once "../config.php";
@@ -13,11 +13,15 @@ require_once "../models/match.php";
 
 
 
-if (isset($_POST['delete'])) {
-    if (isset($_POST['idMatch']) && ($_POST['idMatch'])  != null)
-    Matchs::deleteMatch($_POST['idMatch']);
-}
 
 
-include "../views/listematch.php";
+
+
+
+
+
+
+
+include "../views/ajoutmatch.php";
+
 ?>

@@ -10,8 +10,8 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Date et heures</th>
-                    <th scope="col">Equipes1</th>
-                    <th scope="col">Equipes2</th>
+                    <th scope="col">Equipes 1</th>
+                    <th scope="col">Equipes 2</th>
                     <th scope="col">Compétitions</th>
                     <th scope="col">Catégories</th>
                     <th scope="col">Lieu</th>
@@ -46,11 +46,15 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                Voulez-vous vraiment supprimer ce match ?
+                                                <p>Voulez-vous vraiment supprimer le match ?</p>
+                                                <p><?=(Equipe::getEquipesInfo($match['equ_id'])['equ_name'])?> vs <?=(Equipe::getEquipesInfo($match['equ_id_equipes'])['equ_name'])?></p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <form action=""><button type="button" class="btn btn-primary">Supprimer</button></form>
+                                                <button type="button" class="btnModify" data-bs-dismiss="modal">Close</button>
+                                                <form action="" method="post">
+                                                    <input type="hidden" name="idMatch" value="<?=$match['mat_id']?>">
+                                                    <button type="submit" class="btnDelete" name="delete">Supprimer</button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
