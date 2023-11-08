@@ -50,7 +50,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if (!isset($_POST['equ_id_equipes'])){
         $errors['equ_id_equipes'] = 'Champs obligatoire';
+    
+    }
 
+            
+    if (isset($_POST['equ_id_equipes']) && (isset($_POST ['equ_id']))){
+        
+        if ($_POST['equ_id_equipes'] == $_POST['equ_id'])
+        $errors['equ_id_equipes'] = 'Les équipes doivent être différentes';
     }
 
         if (count($errors) == 0) {

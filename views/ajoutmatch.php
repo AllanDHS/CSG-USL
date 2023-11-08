@@ -17,14 +17,14 @@
             <div class="col">
                 <div class="form-group ">
                     <label for="mat_date" class="mb-2 text-uppercase">Date et heure</label>
-                    <input type="datetime-local" class="form-control classMargin" name="mat_date" id="mat_date">
+                    <input type="datetime-local" class="form-control classMargin" name="mat_date" id="mat_date" value="<?=isset ($_POST['mat_date']) ? $_POST['mat_date'] : " "?>">
                     <span class="text-danger fs-5"><?= $errors['mat_date'] ?? "" ?></span>
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="mat_place" class="mb-2 text-uppercase">Lieu</label>
-                    <input type="text" class="form-control classMargin" name="mat_place" id="mat_place">
+                    <input type="text" class="form-control classMargin" name="mat_place" id="mat_place" value="<?= isset ($_POST['mat_place']) ? $_POST['mat_place'] : " "?>">
                     <span class="text-danger fs-5"><?= $errors['mat_place'] ?? "" ?></span>
                 </div>
             </div>
@@ -38,7 +38,7 @@
 
                         <?php foreach (Categories::getAllCategories() as $categorie) { ?>
 
-                            <option value="<?= $categorie['cat_id'] ?>" <?= isset($_POST['categories']) && $_POST['categories'] == $categorie['cat_id'] ? 'selected' : '' ?>><?= ucfirst($categorie['cat_name']) ?> </option>
+                            <option value="<?= $categorie['cat_id'] ?>" <?= isset($_POST['cat_id']) && $_POST['cat_id'] == $categorie['cat_id'] ? 'selected' : '' ?>><?= ucfirst($categorie['cat_name']) ?> </option>
                         <?php } ?>
                     </select>
                     <span class="text-danger fs-5"><?= $errors['cat_id'] ?? "" ?></span>
@@ -52,7 +52,7 @@
 
                         <?php foreach (Competitions::getAllCompetitions() as $competition) { ?>
 
-                            <option value="<?= $competition['com_id'] ?>" <?= isset($_POST['competitions']) && $_POST['competitions'] == $competition['com_id'] ? 'selected' : '' ?>><?= ucfirst($competition['com_name']) ?> </option>
+                            <option value="<?= $competition['com_id'] ?>" <?= isset($_POST['com_id']) && $_POST['com_id'] == $competition['com_id'] ? 'selected' : '' ?>><?= ucfirst($competition['com_name']) ?> </option>
                         <?php } ?>
 
                     </select>
@@ -69,7 +69,7 @@
 
                         <?php foreach (Equipe::getAllEquipes() as $equipe) { ?>
 
-                            <option value="<?= $equipe['equ_id'] ?>" <?= isset($_POST['equipe1']) && $_POST['equipe1'] == $equipe['equ_id'] ? 'selected' : '' ?>><?= ucfirst($equipe['equ_name']) ?> </option>
+                            <option value="<?= $equipe['equ_id'] ?>" <?= isset($_POST['equ_id']) && $_POST['equ_id'] == $equipe['equ_id'] ? 'selected' : '' ?>><?= ucfirst($equipe['equ_name']) ?> </option>
 
                         <?php } ?>
                     </select>
@@ -84,7 +84,7 @@
 
                         <?php foreach (Equipe::getAllEquipes() as $equipe) { ?>
 
-                            <option value="<?= $equipe['equ_id'] ?>" <?= isset($_POST['equipe2']) && $_POST['equipe2'] == $equipe['equ_id'] ? 'selected' : '' ?>><?= ucfirst($equipe['equ_name']) ?> </option>
+                            <option value="<?= $equipe['equ_id'] ?>" <?= isset($_POST['equ_id_equipes']) && $_POST['equ_id_equipes'] == $equipe['equ_id'] ? 'selected' : '' ?>><?= ucfirst($equipe['equ_name']) ?> </option>
 
                         <?php } ?>
 
@@ -102,7 +102,7 @@
 
     <?php } else { ?>
         <p class="text-success fs-2 text-center text-uppercase mt-5">Le match a bien été ajouté</p>
-        <a href="../controllers/controller-home.php" class="btnModify">retour</a>
+        <a href="../controllers/controller-listematch.php" class="btnModify text-center">retour</a>
     <?php } ?>
 </form>
 

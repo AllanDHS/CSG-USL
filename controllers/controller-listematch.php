@@ -10,14 +10,17 @@ require_once "../models/equipes.php";
 require_once "../models/match.php";
 
 
+if (isset ($_POST['delete'])){
+
+    if (isset($_POST['idBattle']) && !empty($_POST['idBattle']))
+    Matchs::deleteBattle($_POST['idBattle']);
+
+    if (isset($_POST['idMatch']) && !empty($_POST['idMatch']))
+    Matchs::deleteMatchs($_POST['idMatch']);
 
 
-
-if (isset($_POST['delete'])) {
-    if (isset($_POST['idMatch']) && ($_POST['idMatch'])  != null)
-    Matchs::deleteMatch($_POST['idMatch']);
 }
 
 
+
 include "../views/listematch.php";
-?>

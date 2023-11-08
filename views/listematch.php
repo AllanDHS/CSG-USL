@@ -20,25 +20,25 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach (Matchs::getAllMatchs() as $match) : ?>
+                <?php foreach (Matchs::getAllBattles() as $battle) : ?>
                     <tr>
-                        <th scope="row"><?= $match['mat_id'] ?></th>
-                        <td><?= htmlspecialchars($match['mat_date']); ?></td>
-                        <td><?= htmlspecialchars(Equipe::getEquipesInfo($match['equ_id'])['equ_name']); ?></td>
-                        <td><?= htmlspecialchars(Equipe::getEquipesInfo($match['equ_id_equipes'])['equ_name']); ?></td>
-                        <td><?= htmlspecialchars($match['com_name']); ?></td>
-                        <td><?= htmlspecialchars($match['cat_name']); ?></td>
-                        <td><?= htmlspecialchars($match['mat_place']); ?></td>
+                        <th scope="row"><?= $battle['bat_id'] ?></th>
+                        <td><?= htmlspecialchars($battle['mat_date']); ?></td>
+                        <td><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></td>
+                        <td><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></td>
+                        <td><?= htmlspecialchars($battle['com_name']); ?></td>
+                        <td><?= htmlspecialchars($battle['cat_name']); ?></td>
+                        <td><?= htmlspecialchars($battle['mat_place']); ?></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <a href="#"><button class="btnModify">Modifier</button></a>
+                                <a href="../controllers/controller-modifyMatch.php?idBattle=<?=$battle['bat_id']?>"><button class="btnModify">Modifier</button></a>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?=$match['mat_id']?>">
+                                <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?=$battle['bat_id']?>">
                                     Supprimer
                                 </button>
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="modal<?=$match['mat_id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="modal<?=$battle['bat_id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -46,13 +46,13 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Voulez-vous vraiment supprimer le match ?</p>
-                                                <p><?=(Equipe::getEquipesInfo($match['equ_id'])['equ_name'])?> vs <?=(Equipe::getEquipesInfo($match['equ_id_equipes'])['equ_name'])?></p>
+                                                <p>Voulez-vous vraiment supprimer le matchs ?</p>
+                                                <p><?=(Equipe::getEquipesInfo($battle['equ_id'])['equ_name'])?> vs <?=(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name'])?></p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btnModify" data-bs-dismiss="modal">Close</button>
                                                 <form action="" method="post">
-                                                    <input type="hidden" name="idMatch" value="<?=$match['mat_id']?>">
+                                                    <input type="hidden" name="idBattle" value="<?=$battle['bat_id']?>">
                                                     <button type="submit" class="btnDelete" name="delete">Supprimer</button>
                                                 </form>
                                             </div>

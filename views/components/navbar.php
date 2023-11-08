@@ -19,7 +19,7 @@
                     <a class="nav-link text-light" href="../controllers/controller-entrainement.php">Entrainements</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="../controllers/controller-sponsors.php">Nos Sponsors</a>
+                    <a class="nav-link text-light" href="../controllers/controller-sponsors.php">Sponsors</a>
                 </li>
                 <a class="navbar-brand d-none d-md-block" href="../controllers/controller-home.php">
                     <img src="../assets/logo/Logo_CSG-1920w-removebg-preview.png" alt="" width="100">
