@@ -53,6 +53,7 @@
                                                 <button type="button" class="btnModify" data-bs-dismiss="modal">Close</button>
                                                 <form action="" method="post">
                                                     <input type="hidden" name="idBattle" value="<?=$battle['bat_id']?>">
+                                                    <input type="hidden" name="idMatch" value="<?=$battle['mat_id']?>">
                                                     <button type="submit" class="btnDelete" name="delete">Supprimer</button>
                                                 </form>
                                             </div>
