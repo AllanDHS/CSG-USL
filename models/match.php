@@ -12,6 +12,8 @@ class Matchs
     private int $cat_id;
     private int $equ_id;
     private int $equ_id_equipes;
+    private int $score_equipe1;
+    private int $score_equipe2;
 
     /**
      * Ajouter un match dans la base de données
@@ -29,7 +31,7 @@ class Matchs
             // Requête préparée pour insérer les données dans la table matchs
             $insertmatch = "INSERT INTO `matchs` (`mat_date`, `mat_place`, `com_id`, `cat_id`) VALUES (:mat_date, :mat_place, :com_id, :cat_id)";
             $idmatch = $pdo->lastInsertId();
-            $insertequipe = "INSERT INTO `battle` (`mat_id`, `equ_id`,`equ_id_equipes`) VALUES (:mat_id, :equ_id, :equ_id_equipes)";
+            $insertequipe = "INSERT INTO `battle` (`mat_id`, `equ_id`,`equ_id_equipes`,`score_equipe1`,`score_equipe2`) VALUES (:mat_id, :equ_id, :equ_id_equipes, :score_equipe1, :score_equipe2)";
 
             // Préparation de la requête
             $stmtmatch = $pdo->prepare($insertmatch);
@@ -44,6 +46,8 @@ class Matchs
             $stmtequipe->bindValue(':mat_id', $idmatch, PDO::PARAM_INT);
             $stmtequipe->bindValue(':equ_id', $inputs['equ_id'], PDO::PARAM_INT);
             $stmtequipe->bindValue(':equ_id_equipes', $inputs['equ_id_equipes'], PDO::PARAM_INT);
+            $stmtequipe->bindValue(':score_equipe1', $inputs['score_equipe1'], PDO::PARAM_INT);
+            $stmtequipe->bindValue(':score_equipe2', $inputs['score_equipe2'], PDO::PARAM_INT);
             // Exécution de la requête préparée
             $stmtequipe->execute();
             return true;
@@ -76,7 +80,7 @@ class Matchs
                 `competitions`
                 NATURAL JOIN
                 `categories_equipes`';
-               
+
 
 
             // Préparation de la requête
@@ -120,13 +124,15 @@ class Matchs
             $stmtmatch->execute();
 
             // Requête pour mettre à jour les équipes dans la table `battle`
-            $modifyEquipe = "UPDATE `battle` SET `equ_id` = :equ_id, `equ_id_equipes` = :equ_id_equipes WHERE `mat_id` = :mat_id";
+            $modifyEquipe = "UPDATE `battle` SET `equ_id` = :equ_id, `equ_id_equipes` = :equ_id_equipes, `score_equipe1`= :score_equipe1, `score_equipe2`= :score_equipe2 WHERE `mat_id` = :mat_id";
 
             // Préparation de la requête
             $stmtequipe = $pdo->prepare($modifyEquipe);
             $stmtequipe->bindValue(':equ_id', $inputs['equ_id'], PDO::PARAM_INT);
             $stmtequipe->bindValue(':equ_id_equipes', $inputs['equ_id_equipes'], PDO::PARAM_INT);
             $stmtequipe->bindValue(':mat_id', $inputs['mat_id'], PDO::PARAM_INT); // Ajout du paramètre mat_id
+            $stmtequipe->bindValue(':score_equipe1', $inputs['score_equipe1'], PDO::PARAM_INT);
+            $stmtequipe->bindValue(':score_equipe2', $inputs['score_equipe2'], PDO::PARAM_INT);
 
             // Exécution de la requête préparée
             $stmtequipe->execute();

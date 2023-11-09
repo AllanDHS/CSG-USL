@@ -9,7 +9,6 @@ require_once "../models/competitions.php";
 require_once "../models/equipes.php";
 require_once "../models/match.php";
 
-var_dump($_POST);
 
 if (isset($_GET['idBattle'])){
 
@@ -24,6 +23,8 @@ if (isset($_GET['idBattle'])){
     $equipe1 = $match['equ_id'];
     $equipe2 = $match['equ_id_equipes'];
     $matchid = $match['mat_id'];
+    $score1 = $match['score_equipe1'];
+    $score2 = $match['score_equipe2'];
 
 } else {
     header('Location: ../controllers/controller-listematch.php');
@@ -76,6 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $showForm = false;
 
             // insertion des données dans la table matchs
+            var_dump($_POST);
             $match = new Matchs();
             $match->updateMatch($_POST);
         }
