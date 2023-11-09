@@ -154,8 +154,10 @@
 }
 
 
-.container{
-    margin: 25px;
+.containerMatchs{
+    border-radius: 10px;
+    box-shadow: black 0 0 7px;
+
 }
 
 

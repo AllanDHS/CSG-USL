@@ -79,7 +79,8 @@ class Matchs
                 NATURAL JOIN
                 `competitions`
                 NATURAL JOIN
-                `categories_equipes`';
+                `categories_equipes`
+                ORDER BY `mat_date` DESC';
 
 
 

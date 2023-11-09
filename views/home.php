@@ -20,6 +20,51 @@
             <p>resultat du week-end</p>
         </a>
     </div>
+    <div class="row justify-content-evenly matchs col-10 mx-auto">
+        <?php
+        $count = 0;
+        foreach (Matchs::getAllBattles() as $battle) :
+            if ($count == 3) {
+                break;
+            }else if ($battle['score_equipe1'] == null || $battle['score_equipe2'] == null) {
+                continue;
+            }
+        ?>
+            <div class="container text-center  col-3 m-2 containerMatchs">
+                <p>
+                    <?= htmlspecialchars(Categories::getCategorieById($battle['cat_id'])['cat_name']); ?>
+                </p>
+                <p>
+                    <?= htmlspecialchars($battle['mat_date']); ?>
+                </p>
+                <p>
+                    <?= htmlspecialchars($battle['mat_place']); ?>
+                </p>
+
+                <div class="row d-flex align-items-center centerDiv">
+                    <div class="col-4">
+                        <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_logo']); ?>" alt="" width="35%">
+                        <p class="fs-6"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
+                    </div>
+                    <div class="col-4 d-flex flex-row justify-content-between fs-2 ">
+                        <p><?= htmlspecialchars($battle['score_equipe1']) ?></p>
+                        <p>-</p>
+                        <p><?= htmlspecialchars($battle['score_equipe2']) ?></p>
+                    </div>
+                    <div class="col-4">
+                        <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_logo']); ?>" alt="" width="35%">
+                        <p><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
+                    </div>
+                </div>
+                <p>
+                    <?= htmlspecialchars(Competitions::getCompetitionById($battle['com_id'])['com_name']); ?>
+                </p>
+
+            </div>
+        <?php
+            $count++;
+        endforeach; ?>
+    </div>
 
     <div class="matchHomePage">
         <div class="title">
@@ -27,16 +72,18 @@
                 <p>Match a venir</p>
             </a>
         </div>
-        <div class="row justify-content-evenly matchs col-10  mx-auto">
+        <div class="row justify-content-evenly matchs col-10  mx-auto ">
             <?php
             $count = 0;
             foreach (Matchs::getAllBattles() as $battle) :
                 if ($count == 3) {
                     break;
+                } else if ($battle['score_equipe1'] != null || $battle['score_equipe2'] != null) {
+                    continue;
                 }
             ?>
 
-                <div class="container text-center border border-primary col-4  ">
+                <div class="container text-center col-3 m-2 containerMatchs ">
                     <p>
                         <?= htmlspecialchars(Categories::getCategorieById($battle['cat_id'])['cat_name']); ?>
                     </p>
@@ -109,7 +156,6 @@
                 </div>
             </div>
         </div>
-
-
-
-        <?php include "components/footer.php" ?>
+    </div>
+</div>
+<?php include "components/footer.php" ?>
