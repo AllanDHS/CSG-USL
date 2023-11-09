@@ -15,8 +15,11 @@
                     <th scope="col">Compétitions</th>
                     <th scope="col">Catégories</th>
                     <th scope="col">Lieu</th>
+                    <th scope="col">Score Equipe 1</th>
+                    <th scope="col">Score Equipe 2</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
+
                 </tr>
             </thead>
             <tbody>
@@ -29,6 +32,8 @@
                         <td><?= htmlspecialchars($battle['com_name']); ?></td>
                         <td><?= htmlspecialchars($battle['cat_name']); ?></td>
                         <td><?= htmlspecialchars($battle['mat_place']); ?></td>
+                        <td><?=$battle['score_equipe1']; ?></td>
+                        <td><?=$battle['score_equipe2']; ?></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <a href="../controllers/controller-modifyMatch.php?idBattle=<?=$battle['bat_id']?>"><button class="btnModify">Modifier</button></a>

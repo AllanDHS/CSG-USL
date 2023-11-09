@@ -75,10 +75,8 @@ class Matchs
                 NATURAL JOIN
                 `competitions`
                 NATURAL JOIN
-                `categories_equipes`
-                WHERE
-                `score_equipe1` IS NULL
-                AND `score_equipe2` IS NULL';
+                `categories_equipes`';
+               
 
 
             // Préparation de la requête
