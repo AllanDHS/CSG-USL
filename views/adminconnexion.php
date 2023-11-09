@@ -9,11 +9,13 @@
 <form action="#" method="post">
   <div class="form-group mb-3">
     <label for="exampleInputEmail1"></label>
-    <input type="text" class="form-control" id="login" placeholder="Login">
+    <input type="text" class="form-control" id="adm_login" placeholder="Login" name="adm_login">
+    <span class="text-danger fs-5"><?= $errors['adm_login'] ?? "" ?></span>
   </div>
   <div class="form-group mb-3">
     <label for="password"></label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
+    <input type="password" class="form-control" id="adm_password" placeholder="Password" name="adm_password">
+    <span class="text-danger fs-5"><?= $errors['adm_password'] ?? "" ?></span>
   </div>
   <button type="submit" class="btn  mt-3">Connexion</button>
 </form>

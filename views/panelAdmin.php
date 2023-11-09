@@ -24,7 +24,7 @@
     </div>
     <div class="row m-4">
         <div class="col-12">
-            <button class="btn btn-primary text-uppercase">déconnexion</button>
+            <a href="../controllers/controller-admindisconnection.php"><button class="btn btn-primary text-uppercase">déconnexion</button></a>
         </div>
     </div>
     
