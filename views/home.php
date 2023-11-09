@@ -26,16 +26,19 @@
         foreach (Matchs::getAllBattles() as $battle) :
             if ($count == 3) {
                 break;
-            }else if ($battle['score_equipe1'] == null || $battle['score_equipe2'] == null) {
+            } else if ($battle['score_equipe1'] == null || $battle['score_equipe2'] == null) {
                 continue;
             }
         ?>
-            <div class="container text-center  col-3 m-2 containerMatchs">
+            <div class="container text-center col-lg-3 col-12 m-2 containerMatchs">
                 <p>
                     <?= htmlspecialchars(Categories::getCategorieById($battle['cat_id'])['cat_name']); ?>
                 </p>
                 <p>
-                    <?= htmlspecialchars($battle['mat_date']); ?>
+                    <?= Form::formatDateUsToFr(explode(' ', $battle['mat_date'])[0]); ?>
+                </p>
+                <p>
+                    <?= Form::HeureFormat(explode(' ', $battle['mat_date'])[1]); ?>
                 </p>
                 <p>
                     <?= htmlspecialchars($battle['mat_place']); ?>
@@ -44,7 +47,7 @@
                 <div class="row d-flex align-items-center centerDiv">
                     <div class="col-4">
                         <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_logo']); ?>" alt="" width="35%">
-                        <p class="fs-6"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
+                        <p class="Equipes1"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
                     </div>
                     <div class="col-4 d-flex flex-row justify-content-between fs-2 ">
                         <p><?= htmlspecialchars($battle['score_equipe1']) ?></p>
@@ -53,7 +56,7 @@
                     </div>
                     <div class="col-4">
                         <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_logo']); ?>" alt="" width="35%">
-                        <p><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
+                        <p class="Equipes1"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
                     </div>
                 </div>
                 <p>
@@ -83,12 +86,15 @@
                 }
             ?>
 
-                <div class="container text-center col-3 m-2 containerMatchs ">
+                <div class="container text-center col-lg-3 col-12 m-2 containerMatchs ">
                     <p>
                         <?= htmlspecialchars(Categories::getCategorieById($battle['cat_id'])['cat_name']); ?>
                     </p>
                     <p>
-                        <?= htmlspecialchars($battle['mat_date']); ?>
+                        <?= Form::formatDateUsToFr(explode(' ', $battle['mat_date'])[0]); ?>
+                    </p>
+                    <p>
+                        <?= Form::HeureFormat(explode(' ', $battle['mat_date'])[1]); ?>
                     </p>
                     <p>
                         <?= htmlspecialchars($battle['mat_place']); ?>
@@ -97,14 +103,14 @@
                     <div class="row d-flex align-items-center centerDiv">
                         <div class="col-4">
                             <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_logo']); ?>" alt="" width="35%">
-                            <p class="fs-6"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
+                            <p class="Equipes1"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
                         </div>
                         <div class="col-4">
                             <p>-</p>
                         </div>
                         <div class="col-4">
                             <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_logo']); ?>" alt="" width="35%">
-                            <p><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
+                            <p class="Equipes1"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
                         </div>
                     </div>
                     <p>

@@ -18,4 +18,9 @@ class Form
     {
         return implode('/', array_reverse(explode('-', $dateUS)));
     }
+
+    public static function HeureFormat($heure): string
+    {
+        return substr($heure, 0, 5);
+    }
 }

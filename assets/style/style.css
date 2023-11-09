@@ -372,3 +372,32 @@
 
 
 
+@media screen and (max-width:390px) {
+    #carrousel {
+        display: none;
+    }    
+
+    .carou h1{
+        font-size: 25px;
+    }
+
+    .match{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .containerMatchs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .Equipes1{
+        font-size: 13px;
+    }
+}
