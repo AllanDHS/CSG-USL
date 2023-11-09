@@ -154,44 +154,9 @@
 }
 
 
-.top{
-    text-align: center;
-    font-size: small;
-    text-transform: capitalize;
-    margin-top: 1rem;
-
+.container{
+    margin: 25px;
 }
-
-.top p {
-    margin: 0;
-    padding: 0;
-}
-
-.center{
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-}
-
-.score{
-    font-size: 30px;
-    font-weight: 900;
-    padding: 1rem;
-}
-
-.center img{
-    width: 20%;
-}
-
-
-.bottom{
-    text-align: center;
-    font-size: small;
-    text-transform: capitalize;
-    padding-top: 1rem;
-}
-
-
 
 
 
