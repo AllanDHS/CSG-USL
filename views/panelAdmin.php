@@ -13,7 +13,7 @@
     </div>
     <div class="row m-4">
         <div class="col-6 ">
-            <button class="btn btn-primary my-md-2">Ajouter un Évenements</button>
+            <a href="../controllers/controller-ajoutEvent.php"><button class="btn btn-primary my-md-2">Ajouter un Évenements</button></a>
             <button class="btn btn-primary">Liste des Évenements</button>
         </div>
     </div>
