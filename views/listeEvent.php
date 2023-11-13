@@ -30,7 +30,7 @@
                         <td class="text-center"><img src="../assets/imageActu/<?= htmlspecialchars($actu['actu_pictures']); ?>" alt="" width="100%" height="25rem"></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <a href="../controllers/controller-modifyMatch.php?idBattle="><button class="btnModify">Modifier</button></a>
+                                <a href="../controllers/controller-modifyEvent.php?idActu=<?=$actu['actu_id']?>"><button class="btnModify">Modifier</button></a>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?= $actu['actu_id'] ?>">
                                     Supprimer
