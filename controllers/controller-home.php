@@ -8,6 +8,7 @@ require_once "../models/categories_equipes.php";
 require_once "../models/competitions.php";
 require_once "../models/equipes.php";
 require_once "../models/match.php";
+require_once "../models/actualite.php";
 
 // Récupération de tous les matchs
 $matchs = Matchs::getAllBattles();

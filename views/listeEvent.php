@@ -2,7 +2,7 @@
 <?php include "components/navbar.php" ?>
 
 <div class="container">
-    <h3 class="text-center p-4 fs-2">Liste des matchs</h3>
+    <h3 class="text-center p-4 fs-2">Liste des Évenements</h3>
 
     <div class="table-responsive">
         <table class="table table-hover" style="min-height: 80%;">
@@ -13,31 +13,29 @@
                     <th scope="col">Type</th>
                     <th scope="col">title</th>
                     <th scope="col">contenue</th>
-                    <th scope="col">Image</th>
+                    <th scope="col" class="text-center">Image</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
 
                 </tr>
             </thead>
             <tbody>
-                <?php foreach (Actu::getActu() as $actu) : ?>
+                <?php foreach (Actu::getAllActu() as $actu) : ?>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><?= htmlspecialchars($actu['actu_id']); ?></td>
+                        <td><?= htmlspecialchars($actu['actu_date']); ?></td>
+                        <td><?= htmlspecialchars($actu['actu_type']); ?></td>
+                        <td><?= htmlspecialchars($actu['actu_title']); ?></td>
+                        <td><?= htmlspecialchars($actu['actu_text']); ?></td>
+                        <td class="text-center"><img src="../assets/imageActu/<?= htmlspecialchars($actu['actu_pictures']); ?>" alt="" width="100%" height="25rem"></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <a href="../controllers/controller-modifyMatch.php?idBattle=<?= $battle['bat_id'] ?>"><button class="btnModify">Modifier</button></a>
+                                <a href="../controllers/controller-modifyMatch.php?idBattle="><button class="btnModify">Modifier</button></a>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?= $battle['bat_id'] ?>">
+                                <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?= $actu['actu_id'] ?>">
                                     Supprimer
                                 </button>
-
-                                <!-- Modal -->
-                                <!-- <div class="modal fade" id="modal<?= $battle['bat_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="modal<?= $actu['actu_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -45,20 +43,20 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Voulez-vous vraiment supprimer le matchs ?</p>
-                                                <p><?= (Equipe::getEquipesInfo($battle['equ_id'])['equ_name']) ?> vs <?= (Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']) ?></p>
+                                                <p>Voulez-vous vraiment supprimer l'évenement' ?</p>
+                                                <p><?= htmlspecialchars($actu['actu_type']); ?> </p>
+                                                <p><?= htmlspecialchars($actu['actu_title']); ?></p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btnModify" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btnModify" data-bs-dismiss="modal">Annuler</button>
                                                 <form action="" method="post">
-                                                    <input type="hidden" name="idBattle" value="<?= $battle['bat_id'] ?>">
-                                                    <input type="hidden" name="idMatch" value="<?= $battle['mat_id'] ?>">
+                                                    <input type="hidden" name="actu_id" value="<?= $actu['actu_id'] ?>">
                                                     <button type="submit" class="btnDelete" name="delete">Supprimer</button>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                         </td>
                     </tr>
@@ -69,7 +67,7 @@
 </div>
 
 <div class="text-center mt-5">
-    <a href="../controllers/controller-ajoutmatch.php"><button class="btnModify">Ajouter un match</button></a>
+    <a href="../controllers/controller-ajoutevent.php"><button class="btnModify">Ajouter un évenements</button></a>
     <a href="../controllers/controller-paneladmin.php"><button class="btnDelete">Annuler</button></a>
 </div>
 

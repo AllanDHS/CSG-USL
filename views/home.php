@@ -131,22 +131,32 @@
             <p>nos dernière <br>Actualités</p>
         </a>
     </div>
-    <div class="row mb-2">
+    <div class="row justify-content-evenly col-10 mx-auto">
         <div class="col-md-5">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative shadow">
-                <div class="col p-4 d-flex flex-column position-static shadow">
-                    <p class="mb-0 text-primary fs-3">Recrutement</p>
-                    <div class="mb-1 text-muted fs-5">3 octobre 2023</div>
-                    <p>Adrien Pochet</p>
-                    <p class="mb-auto p-3 fs-6">Bon retour chez toi Adrien Pochet et bonne saison 💪🏼</p>
-                    <a href="#" class="fs-7 continue">Lire plus...</a>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <img class="bd-placeholder-img" width="200" height="300" src="../assets/logo/pochet-adrien__picture__2018-2019-3679-7184.png">
+                <?php
+                $count = 0;
+                foreach (Actu::getAllActu() as $actu) :
+                    if ($count == 2) {
+                        break;
+                    }
+                ?>
+                    <div class="col p-4 d-flex flex-column position-static shadow border border-primary">
+                        <p class="mb-0 text-primary fs-3"><?= htmlspecialchars($actu['actu_type']) ?></p>
+                        <div class="mb-1 text-muted fs-5" <?= htmlspecialchars($actu['actu_date']) ?>></div>
+                        <p><?= htmlspecialchars($actu['actu_title']) ?></p>
+                        <p class="mb-auto p-3 fs-6"><?= htmlspecialchars($actu['actu_text']) ?></p>
+                        <div class="col-auto d-none d-lg-block">
+                            <img class="bd-placeholder-img" height="300" src="../assets/imageActu/<?= htmlspecialchars($actu['actu_pictures']) ?>">
 
-                </div>
+                        </div>
+                    </div>
+
             </div>
         </div>
+    <?php
+                    $count++;
+                endforeach; ?>
     </div>
 </div>
 <?php include "components/footer.php" ?>

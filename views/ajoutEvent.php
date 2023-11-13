@@ -9,6 +9,7 @@
 </div>
 
 <form action="#" method="post" enctype="multipart/form-data">
+<?php if ($showForm) { ?>
     <div class="container text-center p-2">
         <div class="row mb-3">
             <div class="col">
@@ -46,6 +47,10 @@
     <div class="text-center">
         <button type="submit" class="btn btn-primary text-uppercase">Ajouter</button>
     </div>
+    <?php } else { ?>
+        <p class="text-success fs-2 text-center text-uppercase mt-5">L'évenement a bien été ajouté</p>
+        <a href="../controllers/controller-listeEvent.php" class="btnModify text-center">retour</a>
+    <?php } ?>
 
 </form>
 

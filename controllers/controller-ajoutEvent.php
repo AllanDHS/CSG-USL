@@ -15,6 +15,9 @@ require_once "../models/actualite.php";
 // Nous allons créer un tableau qui contiendra les erreurs
 $errors = [];
 
+// Nous allons créer une variable qui va définir si le formulaire est valide ou non
+$showForm = true;
+
 if (empty($_POST['actu_date'])) {
     $errors['actu_date'] = 'Champs obligatoire';
 } 
@@ -76,6 +79,7 @@ if (isset($_FILES["fileToUpload"])) {
 
         // Nous controlons si la variable $uploadOk est égale à true, indiquant ainsi que nous pouvons uploader l'image
         if ($uploadOk == true && empty($errors)) {
+            $showForm = false;
 
             // Nous indiquons le chemin du répertoire dans lequel les images vont être téléchargés.
             $directory = "../assets/imageActu/";

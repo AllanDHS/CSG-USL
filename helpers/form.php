@@ -23,4 +23,18 @@ class Form
     {
         return substr($heure, 0, 5);
     }
+
+
+    /**
+     * Permet de 
+     */
+
+     public static function deleteFile($directory, $name): void
+     {
+         $file = $directory . $name;
+         if (file_exists($file)) {
+             unlink($file);
+         }
+     }
+
 }
