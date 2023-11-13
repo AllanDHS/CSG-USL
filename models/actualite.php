@@ -72,6 +72,70 @@ class Actu
 
 
 
+    /**
+     * Modification d'un event avec pictures
+     * @param array $inputs tableau contenant les données du formulaire
+     * @return bool true si l'event a bien été modifié, sinon false
+     */
+
+     public static function uptadeActu ($actu_date, $actu_title, $actu_type, $actu_text, $actu_pictures, $actu_id)
+     {
+         $pdo = Database::createInstancePDO();
+         $sql = 'UPDATE `actualites` SET `actu_date` = :actu_date, `actu_title` = :actu_title, `actu_type` = :actu_type, `actu_text` = :actu_text, `actu_pictures` = :actu_pictures WHERE `actu_id` = :actu_id';
+         $stmt = $pdo->prepare($sql);
+         $stmt->bindValue(':actu_date', $actu_date, PDO::PARAM_STR);
+         $stmt->bindValue(':actu_title', $actu_title, PDO::PARAM_STR);
+         $stmt->bindValue(':actu_type', $actu_type, PDO::PARAM_STR);
+         $stmt->bindValue(':actu_text', $actu_text, PDO::PARAM_STR);
+         $stmt->bindValue(':actu_pictures', $actu_pictures, PDO::PARAM_STR);
+         $stmt->bindValue(':actu_id', $actu_id, PDO::PARAM_INT);
+         $stmt->execute();
+         $actu = $stmt->fetch(PDO::FETCH_ASSOC);
+         return $actu;
+     }
+
+
+
+    
+
+
+    /**
+     * Modification d'un event sans pictures
+     * @param array $inputs tableau contenant les données du formulaire
+     * @return bool true si l'event a bien été modifié, sinon false
+     */
+
+    public static function uptadeActuWithoutPictures ($actu_date, $actu_title, $actu_type, $actu_text, $actu_id){
+        $pdo = Database::createInstancePDO();
+        $sql = 'UPDATE `actualites` SET `actu_date` = :actu_date, `actu_title` = :actu_title, `actu_type` = :actu_type, `actu_text` = :actu_text WHERE `actu_id` = :actu_id';
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':actu_date', $actu_date, PDO::PARAM_STR);
+        $stmt->bindValue(':actu_title', $actu_title, PDO::PARAM_STR);
+        $stmt->bindValue(':actu_type', $actu_type, PDO::PARAM_STR);
+        $stmt->bindValue(':actu_text', $actu_text, PDO::PARAM_STR);
+        $stmt->bindValue(':actu_id', $actu_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $actu = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $actu;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

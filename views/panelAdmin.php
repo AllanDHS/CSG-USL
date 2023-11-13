@@ -18,8 +18,9 @@
         </div>
     </div>
     <div class="row m-4">
-        <div class="col-12">
-            <button class="btn btn-primary">Ajouter un Album Photos</button>
+        <div class="col-6">
+            <a href="../controllers/controller-addAlbum.php"><button class="btn btn-primary">Ajouter un Album Photos</button></a>
+            <a href="../controllers/controller-listeAlbum.php"><button class="btn btn-primary">Liste des Albums Photos</button></a>
         </div>
     </div>
     <div class="row m-4">

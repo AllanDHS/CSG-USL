@@ -21,6 +21,7 @@ if (isset($_GET['idActu'])){
     $type = $actu['actu_type'];
     $text = $actu['actu_text'];
     $actuid = $actu['actu_id'];
+    $actu_pictures = $actu['actu_pictures'];
     $showForm = true;
 } else {
     header('Location: ../controllers/controller-listeActu.php');
@@ -50,6 +51,10 @@ if (empty($_POST['actu_type'])) {
 if (empty($_POST['actu_text'])) {
     $errors['actu_text'] = 'Champs obligatoire';
 }
+
+
+
+
 
 
 // Nous recherchons si $_FILES["fileToUpload"] existe pour éviter toutes erreurs pour la suite
@@ -103,15 +108,24 @@ if (isset($_FILES["fileToUpload"])) {
             // Nous allons définir $new_name qui aura un nom d'image unique avec : la fonction uniqid() et une extension '.webp'
             $new_name = uniqid() . '.webp';
 
-            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $directory . $new_name)) {
-
+            if (isset($_POST['actu_date']) && isset($_POST['actu_title']) && isset($_POST['actu_type']) && isset($_POST['actu_text'])) {
                 $actu_date = $_POST['actu_date'];
                 $actu_title = $_POST['actu_title'];
                 $actu_type = $_POST['actu_type'];
                 $actu_text = $_POST['actu_text'];
                 $actu_pictures = $new_name;
+                $actu_id = $actuid;
             
-            Actu::addActu($actu_date, $actu_title, $actu_type, $actu_text, $actu_pictures);
+                if (empty($errors)) {
+                    if (isset($_FILES["fileToUpload"])) {
+                        $actu_pictures = $new_name;
+                        Actu::uptadeActu($actu_date, $actu_title, $actu_type, $actu_text, $actu_pictures, $actu_id);
+                    } else {
+                        Actu::uptadeActuWithoutPictures($actu_date, $actu_title, $actu_type, $actu_text, $actu_id);
+                    }
+                    $showForm = false;
+                }
+            }
 
                 $uploadMessage = '<span class="h4 text-success">le fichier a bien été uploadé</span>';
             } else {
@@ -120,7 +134,7 @@ if (isset($_FILES["fileToUpload"])) {
             }
         }
     }
-}
+
 
 
 
