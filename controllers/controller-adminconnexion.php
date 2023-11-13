@@ -7,9 +7,6 @@ require_once "../helpers/database.php";
 require_once "../models/admin.php";
 
 
-
-var_dump($_SESSION);
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     var_dump($_POST);
     if (isset($_POST['adm_login']) && !empty($_POST['adm_login']) && isset($_POST['adm_password']) && !empty($_POST['adm_password'])) {

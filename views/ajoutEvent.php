@@ -8,37 +8,38 @@
     </div>
 </div>
 
-<form action="#" method="post">
+<form action="#" method="post" enctype="multipart/form-data">
     <div class="container text-center p-2">
         <div class="row mb-3">
             <div class="col">
                 <div class="form-group">
                     <label for="act_date" class="mb-2 text-uppercase">Date</label>
-                    <input type="text" class="form-control mx-auto text-center" id="act_date" name="act_date" placeholder="JJ/MM/AAAA">
-                    <span class="text-danger fs-5"><?= $errors['act_date'] ?? "" ?></span>
+                    <input type="text" class="form-control mx-auto text-center" id="actu_date" name="actu_date" placeholder="JJ/MM/AAAA">
+                    <span class="text-danger fs-5"><?= $errors['actu_date'] ?? "" ?></span>
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="act_title" class="mb-2 text-uppercase">Titre</label>
-                    <input type="text" class="form-control mx-auto" id="act_title" name="act_title">
-                    <span class="text-danger fs-5"><?= $errors['act_title'] ?? "" ?></span>
+                    <input type="text" class="form-control mx-auto" id="actu_title" name="actu_title">
+                    <span class="text-danger fs-5"><?= $errors['actu_title'] ?? "" ?></span>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="act_type" class="mb-2 text-uppercase">Type Actualités</label>
-                <input type="text" class="form-control mx-auto" id="act_type" name="act_type">
+                <input type="text" class="form-control mx-auto" id="actu_type" name="actu_type">
+                <span class="text-danger fs-5"><?= $errors['actu_type'] ?? "" ?></span>
             </div>
-
         </div>
-        <textarea class="form-control m-4 mx-auto" id="act_content" name="act_content" rows="6" placeholder="Saisir le contenu de l'actualités"></textarea>
-        <span class="text-danger fs-5"><?= $errors['act_content'] ?? "" ?></span>
+        <textarea class="form-control m-4 mx-auto" id="actu_text" name="actu_text" rows="6" placeholder="Saisir le contenu de l'actualités"></textarea>
+        <span class="text-danger fs-5"><?= $errors['actu_text'] ?? "" ?></span>
     </div>
     <div class="">
         <div class="mb-3">
             <label for="formFile" class="form-label"></label>
-            <input class="form-control" type="file" id="formFileMultiple" multiple>
+            <input class="form-control" type="file" id="formFileMultiple" multiple name="fileToUpload" id="fileToUpload">
+            <span class="text-danger fs-5"><?= $uploadMessage ?? "" ?></span>
         </div>
     </div>
 
