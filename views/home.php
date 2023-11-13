@@ -128,35 +128,34 @@
 <div class="container scoreContainer">
     <div class="title">
         <a href="">
-            <p>nos dernière <br>Actualités</p>
+            <p>nos dernière Actualités</p>
         </a>
     </div>
-    <div class="row justify-content-evenly col-10 mx-auto">
-        <div class="col-md-5">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative shadow">
-                <?php
-                $count = 0;
-                foreach (Actu::getAllActu() as $actu) :
-                    if ($count == 2) {
-                        break;
-                    }
-                ?>
-                    <div class="col p-4 d-flex flex-column position-static shadow border border-primary">
-                        <p class="mb-0 text-primary fs-3"><?= htmlspecialchars($actu['actu_type']) ?></p>
-                        <div class="mb-1 text-muted fs-5" <?= htmlspecialchars($actu['actu_date']) ?>></div>
-                        <p><?= htmlspecialchars($actu['actu_title']) ?></p>
-                        <p class="mb-auto p-3 fs-6"><?= htmlspecialchars($actu['actu_text']) ?></p>
-                        <div class="col-auto d-none d-lg-block">
-                            <img class="bd-placeholder-img" height="300" src="../assets/imageActu/<?= htmlspecialchars($actu['actu_pictures']) ?>">
+    <div class="row justify-content-evenly col-12 mx-auto">
 
-                        </div>
-                    </div>
 
+        <?php
+        $count = 0;
+        foreach (Actu::getAllActu() as $actu) :
+            if ($count == 2) {
+                break;
+            }
+        ?>
+            <div class="col-lg-5 d-flex flex-column position-static shadow py-3">
+                <p class="mb-0 text-primary fs-3"><?= htmlspecialchars($actu['actu_type']) ?></p>
+                <div class="mb-1 text-muted fs-5"><?= htmlspecialchars($actu['actu_date']) ?></div>
+                <p><?= htmlspecialchars($actu['actu_title']) ?></p>
+                <p class="mb-auto p-3 fs-6 overflow-hidden"><?= htmlspecialchars($actu['actu_text']) ?></p>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="test-img" src="../assets/imageActu/<?= htmlspecialchars($actu['actu_pictures']) ?>">
+                </div>
             </div>
-        </div>
-    <?php
-                    $count++;
-                endforeach; ?>
+        <?php
+            $count++;
+        endforeach; ?>
+
+
+
     </div>
 </div>
 <?php include "components/footer.php" ?>

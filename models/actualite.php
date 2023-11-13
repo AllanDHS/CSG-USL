@@ -41,7 +41,7 @@ class Actu
     public static function getAllActu()
     {
         $pdo = Database::createInstancePDO();
-        $sql = 'SELECT * FROM `actualites`';
+        $sql = 'SELECT * FROM `actualites` ORDER BY `actu_date` DESC';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         $actu = $stmt->fetchAll(PDO::FETCH_ASSOC);

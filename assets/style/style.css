@@ -186,6 +186,11 @@
     transform: scale(1.1) ;
 }
 
+.test-img{
+    height: 15rem;
+    width: auto;
+}
+
 
 
 /* Page Entrainements.php */
