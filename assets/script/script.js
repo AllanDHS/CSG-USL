@@ -1,5 +1,5 @@
 document.body.onload = function() {
-    nbr = 3;
+    nbr = 13;
     p = 0;
     container = document.getElementById("container");
     left = document.getElementById("left");
