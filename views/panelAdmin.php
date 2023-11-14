@@ -24,6 +24,12 @@
         </div>
     </div>
     <div class="row m-4">
+        <div class="col-6">
+            <a href="../controllers/controller-addPhotos.php"><button class="btn btn-primary">Ajouter des photos </button></a>
+            
+        </div>
+    </div>
+    <div class="row m-4">
         <div class="col-12">
             <a href="../controllers/controller-admindisconnection.php"><button class="btn btn-primary text-uppercase">déconnexion</button></a>
         </div>

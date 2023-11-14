@@ -39,4 +39,22 @@ class Album
         $alb = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $alb;
     }
+
+
+    /**
+     * récupération d'un album
+     * @param int $alb_id
+     * @return array
+     */
+
+    public static function getAlbumbyID(int $alb_id): array
+    {
+        $pdo = Database::createInstancePDO();
+        $sql = 'SELECT * FROM `album` WHERE `alb_id` = :alb_id';
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':alb_id', $alb_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $alb = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $alb;
+    }
 }
