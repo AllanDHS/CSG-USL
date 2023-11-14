@@ -37,6 +37,7 @@
         </div>
         <div class="">
             <div class="mb-3">
+            <img src="../assets/imageActu/<?=$actu_pictures?>" alt="" width="20%">
                 <label for="formFile" class="form-label"></label>
                 <input class="form-control" type="file" id="formFileMultiple" multiple name="fileToUpload" id="fileToUpload" value="<?=$actu_pictures?>">
                 <span class="text-danger fs-5"><?= $uploadMessage ?? "" ?></span>

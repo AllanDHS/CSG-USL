@@ -3,7 +3,7 @@
 
 <h3 class="text-center mt-4 mb-4">Créer un Album</h3>
 
-<form action="#" method="post" enctype="multipart/form-data">
+<form action="#" method="post">
     <?php if ($showForm) { ?>
         <div class="container text-center p-2">
             <div class="row mb-3">
