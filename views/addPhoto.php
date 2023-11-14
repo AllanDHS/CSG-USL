@@ -11,12 +11,12 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="alb_name" class="mb-2 text-uppercase">Album</label>
-                        <select name="alb_name" class="form-control" id="alb_name">
+                        <select name="alb_id" class="form-control" id="alb_id">
                             <option value="" selected disabled>Choisissez un Ablum </option>
 
                             <?php foreach (Album::getAllAlbums() as $album) { ?>
 
-                                <option value="<?= $album['alb_name'] ?>" <?= isset($_POST['alb_name']) && $_POST['alb_name'] == $album['alb_name'] ? 'selected' : '' ?>><?= ucfirst($album['alb_name']) ?> </option>
+                                <option value="<?= $album['alb_id'] ?>" <?= isset($_POST['alb_id']) && $_POST['alb_id'] == $album['alb_id'] ? 'selected' : '' ?>><?= ucfirst($album['alb_name']) ?> </option>
                             <?php } ?>
                         </select>
                         <span class="text-danger fs-5"><?= $errors['alb_name'] ?? "" ?></span>

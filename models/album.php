@@ -47,7 +47,7 @@ class Album
      * @return array
      */
 
-    public static function getAlbumbyID(int $alb_id): array
+    public static function getAlbumName(int $alb_id): string
     {
         $pdo = Database::createInstancePDO();
         $sql = 'SELECT * FROM `album` WHERE `alb_id` = :alb_id';
@@ -55,6 +55,8 @@ class Album
         $stmt->bindValue(':alb_id', $alb_id, PDO::PARAM_INT);
         $stmt->execute();
         $alb = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $alb;
+        var_dump($alb);
+        return $alb['alb_name'];
+        
     }
 }
