@@ -32,6 +32,8 @@ if (isset($_GET['idActu'])) {
 $showForm = true;
 
 
+var_dump($actu_pictures);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Nous définissons le tableau d'erreurs
     $errors = [];
@@ -124,16 +126,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $actu_text = $_POST['actu_text'];
                     $actu_id = $actuid;
                     $actu_pictures = $new_name;
-                
-                Actu::uptadeActu($actu_date, $actu_title, $actu_type, $actu_text, $actu_pictures, $actuid);
-    
+                    $old_name = Actu::getActuById($actu_id)['actu_pictures'];
+                    
+
+                    
+                    // Nous supprimons l'ancien fichier
+                    if (file_exists($directory . $old_name))
+                    unlink($directory . $old_name);
+
+                    Actu::uptadeActu($actu_date, $actu_title, $actu_type, $actu_text, $new_name, $actuid);
+
+                    
+                    
+
                     $uploadMessage = '<span class="h4 text-success">le fichier a bien été uploadé</span>';
                 } else {
                     $uploadMessage = '<span class="h6 text-danger">Erreur lors de l\'upload de votre fichier</span>';
                     $uploadOk = false;
                 }
 
-                
+
 
                 $uploadMessage = '<span class="h4 text-success">le fichier a bien été uploadé</span>';
             } else {
