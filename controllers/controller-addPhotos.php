@@ -27,7 +27,7 @@ $showForm = true;
 // Nous initialisons la variable $uploadOk à true
 $uploadOk = true;
 
-var_dump($_POST);
+
 
 // Nous recherchons si $_FILES["fileToUpload"] existe pour éviter toutes erreurs pour la suite
 if (isset($_FILES["fileToUpload"])) {
@@ -35,7 +35,7 @@ if (isset($_FILES["fileToUpload"])) {
     $uploadMessage = '';
 
     $test = $_FILES['fileToUpload']['error'];
-    var_dump($test);
+    
 
     // Nous controlons que l'utilisateur a bien sélectionné une image à l'aide du code error, il doit être égal à 0
     if ($_FILES['fileToUpload']['error'][0] !== 0) {
@@ -51,7 +51,7 @@ if (isset($_FILES["fileToUpload"])) {
         // Nous initialisons la variable $uploadOk à true
         $uploadOk = true;
 
-        var_dump(Album::getAlbumName($_POST['alb_id']));
+        
 
         // création du répertoire avec le nom de l'album choisis si il n'existe pas
         if (!is_dir('../assets/' . Album::getAlbumName($_POST['alb_id']))) {

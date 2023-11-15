@@ -12,4 +12,4 @@
     
     <title>CSG-USL HANDBALL</title>
 </head>
-<body>
+<body class="bg-light">
