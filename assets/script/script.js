@@ -60,5 +60,12 @@ document.body.onload = function() {
 }
 
 
+// Initialisation de Fancybox
+
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  });
+
+
 
 

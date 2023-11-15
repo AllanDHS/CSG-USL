@@ -6,6 +6,8 @@ require_once "../helpers/form.php";
 require_once "../models/album.php";
 require_once "../models/photos.php";
 
+$alb_id = $_GET['album'];
+
 
 
 

@@ -27,7 +27,7 @@
                 <p class="card-text text-uppercase fs-5"><?= $album['alb_name'] ?></p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="../controllers/controller-photoPage.php"><button type="button" class="btn btn-sm btn-outline-secondary">+ photos</button></a>
+                    <a href="../controllers/controller-photoPage.php?album=<?=$album['alb_id']?>"><button type="button" class="btn btn-sm btn-outline-secondary">+ photos</button></a>
 
                   </div>
                   <small class="text-muted">9 mins</small>

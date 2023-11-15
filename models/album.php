@@ -42,7 +42,7 @@ class Album
 
 
     /**
-     * récupération d'un album
+     * récupération d'un nom d'album par rapport à son id
      * @param int $alb_id
      * @return array
      */
@@ -92,4 +92,5 @@ class Album
         $alb = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $alb;
     }
+
 }
