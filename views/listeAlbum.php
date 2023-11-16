@@ -12,7 +12,6 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Titre de l'album</th>
-                    <th scope="col" class="text-center">Image Presentation</th>
                     <th scope="col" class="text-center"></th>
                     <th scope="col" class="text-center"></th>
                     
@@ -24,11 +23,9 @@
                     <tr>
                         <td><?= htmlspecialchars($album['alb_id']); ?></td>
                         <td><?= htmlspecialchars($album['alb_name']); ?></td>
-                        <td class="text-center"><img src="<?= '../assets/albumPhoto/' . $album['alb_name'] . '/' . Album::getAlbumPhotos($album['alb_id'])[0]['pho_name']  ?>" alt="" width="100%" height="25rem"></td>
                         <td class="text-center"></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <a href="../controllers/controller-modifyEvent.php?idActu="><button class="btnModify">Modifier</button></a>
                                 <a href="../controllers/controller-modifyEvent.php?idActu="><button class="btnModify">Ajouter Photos</button></a>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?= $album['alb_id'] ?>">

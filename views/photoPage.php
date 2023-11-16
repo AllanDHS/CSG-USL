@@ -16,9 +16,9 @@
     <?php foreach (Album::getAlbumPhotos($alb_id) as $photo) : ?>
 
 
-        <div class="card shadow-sm col-2 m-2">
+        <div class="card shadow-sm col-2 m-2 ">
             <a data-fancybox="gallery" data-src="<?= '../assets/albumPhoto/' . Album::getAlbumName($alb_id) . '/' . $photo['pho_name']  ?>" data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code">
-                <img src="<?= '../assets/albumPhoto/' . Album::getAlbumName($alb_id) . '/' . $photo['pho_name']  ?>" width="200" height="150" alt="" />
+                <img src="<?= '../assets/albumPhoto/' . Album::getAlbumName($alb_id) . '/' . $photo['pho_name']  ?>"  alt="" class="img-fluid p-1"/>
             </a>
         </div>
     <?php endforeach; ?>

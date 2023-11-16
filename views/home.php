@@ -147,7 +147,7 @@
                 <p><?= htmlspecialchars($actu['actu_title']) ?></p>
                 <p class="mb-auto p-3 fs-6 overflow-hidden"><?= htmlspecialchars($actu['actu_text']) ?></p>
                 <div class="col-auto d-none d-lg-block">
-                    <img class="test-img" src="../assets/imageActu/<?= htmlspecialchars($actu['actu_pictures']) ?>">
+                    <img class="test-img rounded" src="../assets/imageActu/<?= htmlspecialchars($actu['actu_pictures']) ?>">
                 </div>
             </div>
         <?php
