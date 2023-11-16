@@ -20,7 +20,7 @@
         ?>
           <div class="col">
             <div class="card shadow-sm">
-              <img class="bd-placeholder-img card-img-top" width="100%" src="<?= '../assets/albumPhoto' . $album['alb_name'] . '/' . Album::getAlbumPhotos($album['alb_id'])[0]['pho_name']  ?>" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <img class="bd-placeholder-img card-img-top" width="100%" src="<?= '../assets/albumPhoto/' . $album['alb_name'] . '/' . Album::getAlbumPhotos($album['alb_id'])[0]['pho_name']  ?>" preserveAspectRatio="xMidYMid slice" focusable="false">
               <div class="card-body">
                 <p class="card-text text-uppercase fs-5"><?= $album['alb_name'] ?></p>
                 <div class="d-flex justify-content-between align-items-center">

@@ -13,10 +13,9 @@
                     <th scope="col">#</th>
                     <th scope="col">Titre de l'album</th>
                     <th scope="col" class="text-center">Image Presentation</th>
-                    <th scope="col" class="text-center">Nbr de photos</th>
                     <th scope="col" class="text-center"></th>
                     <th scope="col" class="text-center"></th>
-                    <th scope="col" class="text-center"></th>
+                    
 
                 </tr>
             </thead>
@@ -25,17 +24,19 @@
                     <tr>
                         <td><?= htmlspecialchars($album['alb_id']); ?></td>
                         <td><?= htmlspecialchars($album['alb_name']); ?></td>
-                        <td class="text-center"><img src="../assets/" alt="" width="100%" height="25rem"></td>
+                        <td class="text-center"><img src="<?= '../assets/albumPhoto/' . $album['alb_name'] . '/' . Album::getAlbumPhotos($album['alb_id'])[0]['pho_name']  ?>" alt="" width="100%" height="25rem"></td>
                         <td class="text-center"></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <a href="../controllers/controller-modifyEvent.php?idActu="><button class="btnModify">Modifier</button></a>
                                 <a href="../controllers/controller-modifyEvent.php?idActu="><button class="btnModify">Ajouter Photos</button></a>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?= $album['alb_id']?>">
+                                <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?= $album['alb_id'] ?>">
                                     Supprimer
                                 </button>
-                                <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                
+                                <div class="modal fade" id="modal<?= $album['alb_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -43,14 +44,13 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Voulez-vous vraiment supprimer l'album ?</p>
-                                                <p><?= htmlspecialchars($album['alb_name']); ?> </p>
-                                                
+                                                <p>Voulez-vous vraiment supprimer l'Album ?</p>
+                                                <p></p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btnModify" data-bs-dismiss="modal">Annuler</button>
                                                 <form action="" method="post">
-                                                    <input type="hidden" name="alb_id" value="">
+                                                    <input type="hidden" name="alb_id" value="<?= $album['alb_id'] ?>">
                                                     <button type="submit" class="btnDelete" name="delete">Supprimer</button>
                                                 </form>
                                             </div>
