@@ -61,7 +61,7 @@ if (isset($_FILES["fileToUpload"])) {
         foreach ($_FILES['fileToUpload']['tmp_name'] as $image) {
 
             // Nous indiquons le chemin du répertoire dans lequel les images vont être téléchargés par rapport a l'id de L'album choisis.
-            $directory = '../assets/' . Album::getAlbumName($_POST['alb_id']) . '/';
+            $directory = '../assets/albumPhoto' . Album::getAlbumName($_POST['alb_id']) . '/';
 
             // Nous allons définir $new_name qui aura un nom d'image unique avec : la fonction uniqid() et une extension '.webp'
             $new_name = uniqid() . '.webp';

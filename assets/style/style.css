@@ -17,6 +17,11 @@
 
  /* Body */
 
+ body{
+    background-color: #0174BE !important;
+ }
+
+
 
  /* NavBar */
 
@@ -160,7 +165,10 @@ background: linear-gradient(90deg, rgba(0,80,135,1) 0%, rgba(0,151,255,1) 100%);
 
  }
 
-
+.containerActu{
+    border-radius: 10px;
+     box-shadow: black 0 0 7px;
+}
 
 
 
@@ -309,9 +317,9 @@ background: linear-gradient(90deg, rgba(0,80,135,1) 0%, rgba(0,151,255,1) 100%);
  /* Footer */
  .footer-basic {
      padding: 30px 0;
-     background-color: #ffffff;
-     color: #4b4c4d;
-     border-top: 3px solid #0785D9;
+     background-color: #0174BE;
+     color: #ffffff;
+     border-top: 3px solid #cec9c9;
      margin-top: 10px;
 
  }

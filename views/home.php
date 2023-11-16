@@ -5,19 +5,19 @@
 
 
 <div class="carou">
-    <h1>Bienvenue sur le site de <br> l'entente CSG/USL Handball</h1>
+    <h1 class="text-light">Bienvenue sur le site de <br> l'entente CSG/USL Handball</h1>
     <div id="carrousel">
         <div id="container">
 
         </div>
-        <img src="../assets/logo/icons8-vers-l'avant-100.png" alt="" class="button" id="left">
-        <img src="../assets/logo/icons8-vers-l'avant-100.png" alt="" class="button" id="right">
+        <img src="../assets/logo/icons8-vers-l'avant-50.png" alt="" class="button" id="left">
+        <img src="../assets/logo/icons8-vers-l'avant-50.png" alt="" class="button" id="right">
     </div>
 </div>
 <div class="matchHomePage">
     <div class="title">
         <a href="">
-            <p>resultat du week-end</p>
+            <p class="text-light">resultat du week-end</p>
         </a>
     </div>
     <div class="row justify-content-evenly matchs col-10 mx-auto">
@@ -30,7 +30,7 @@
                 continue;
             }
         ?>
-            <div class="container text-center col-lg-3 col-12 m-2 containerMatchs">
+            <div class="container text-center col-lg-3 col-12 m-2 containerMatchs bg-light">
                 <p>
                     <?= htmlspecialchars(Categories::getCategorieById($battle['cat_id'])['cat_name']); ?>
                 </p>
@@ -72,7 +72,7 @@
     <div class="matchHomePage">
         <div class="title">
             <a href="">
-                <p>Match a venir</p>
+                <p class="text-light">Match a venir</p>
             </a>
         </div>
         <div class="row justify-content-evenly matchs col-10  mx-auto ">
@@ -86,7 +86,7 @@
                 }
             ?>
 
-                <div class="container text-center col-lg-3 col-12 m-2 containerMatchs ">
+                <div class="container text-center col-lg-3 col-12 m-2 containerMatchs bg-light ">
                     <p>
                         <?= htmlspecialchars(Categories::getCategorieById($battle['cat_id'])['cat_name']); ?>
                     </p>
@@ -128,7 +128,7 @@
 <div class="container scoreContainer">
     <div class="title">
         <a href="">
-            <p>nos dernière Actualités</p>
+            <p class="text-light">nos dernière Actualités</p>
         </a>
     </div>
     <div class="row justify-content-evenly col-12 mx-auto">
@@ -141,7 +141,7 @@
                 break;
             }
         ?>
-            <div class="col-lg-5 d-flex flex-column position-static shadow py-3">
+            <div class="col-lg-5 d-flex flex-column position-static py-3 bg-light containerActu">
                 <p class="mb-0 text-primary fs-3"><?= htmlspecialchars($actu['actu_type']) ?></p>
                 <div class="mb-1 text-muted fs-5"><?= htmlspecialchars($actu['actu_date']) ?></div>
                 <p><?= htmlspecialchars($actu['actu_title']) ?></p>
@@ -153,8 +153,6 @@
         <?php
             $count++;
         endforeach; ?>
-
-
 
     </div>
 </div>

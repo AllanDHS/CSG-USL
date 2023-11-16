@@ -6,7 +6,7 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">L'album photo de l'entente</h1>
+        <h1 class="fw-light text-light">L'album photo de l'entente</h1>
         <p class="lead text-muted">Retrouvez toutes les photos de la saison 2023-2024</p>
       </div>
     </div>
@@ -20,9 +20,7 @@
         ?>
           <div class="col">
             <div class="card shadow-sm">
-              <img class="bd-placeholder-img card-img-top" width="100%" src="<?= '../assets/' . $album['alb_name'] . '/' . Album::getAlbumPhotos($album['alb_id'])[0]['pho_name']  ?>" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <span><?=$message?></span>
-
+              <img class="bd-placeholder-img card-img-top" width="100%" src="<?= '../assets/albumPhoto' . $album['alb_name'] . '/' . Album::getAlbumPhotos($album['alb_id'])[0]['pho_name']  ?>" preserveAspectRatio="xMidYMid slice" focusable="false">
               <div class="card-body">
                 <p class="card-text text-uppercase fs-5"><?= $album['alb_name'] ?></p>
                 <div class="d-flex justify-content-between align-items-center">
