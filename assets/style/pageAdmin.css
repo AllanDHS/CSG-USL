@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Paytone+One&display=swap');
+
+
+.containerMatchs {
+    padding: 2rem 0;
+    width: 30%
+}
+
+.fi-rr-list {
+    background-color: #fff;
+    border-radius: 72px;
+    padding: 0.5rem;
+    font-size: 1.7rem;
+    color: #FFC436;
+    margin-right: 1rem;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: -2px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    
+}
+
+.BottomBtn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.BottomBtn .BtnView {
+    display: flex;
+    align-items: center;
+    border-radius: 72px;
+    position: relative;
+    padding: 0.5rem 1rem;
+    width: 300px;
+    justify-content: center;
+    background-color: #FFC436;
+    font-family: 'Belanosima', sans-serif;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.BottomBtn .BtnView:hover {
+    background-color: #FFC436;
+    color: #fff;
+}
+
+
+.RightBtn .BtnAdd {
+    display: flex;
+    align-items: center;
+    border-radius: 72px;
+    position: relative;
+    padding: 0.5rem 1rem;
+    width: 200px;
+    justify-content: center;
+    background-color: #0785D9;
+    font-family: 'Belanosima', sans-serif;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.fi-rr-plus {
+    background-color: #fff;
+    border-radius: 72px;
+    padding: 0.5rem;
+    font-size: 1.7rem;
+    color: #0785D9;
+    margin-right: 1rem;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: -2px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    
+    
+}
+
+.RightBtn .BtnAdd:hover {
+    background-color: #0785D9;
+    color: #fff;
+}

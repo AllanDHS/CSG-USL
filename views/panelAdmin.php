@@ -1,41 +1,71 @@
 <?php include "components/header.php" ?>
 <?php include "components/navbar.php" ?>
 
-<div class="container-fluid">
-    <div class="row m-4">
-        <div class="col-12">
-            <p class="fs-4 text-uppercase">Panel Admin</p>
+<h3 class="text-center text-light p-4">Bienvenue sur le panel Admin</h3>
+
+<div class="container row mx-auto justify-content-between text-center bg-light shadow mb-5">
+    <h1 class="text-center p-4">Matchs</h1>
+    <div class=" col-lg-3 border border-success">
+        <div class="container text-center containerMatchs bg-secondary ">
+            <p>match</p>
+            <p>azdazd</p>
         </div>
-        <div class="col-6">
-            <a href="../controllers/controller-ajoutmatch.php"><button class="btn btn-primary my-md-2">Ajouter un Matchs</button></a>
-            <a href="../controllers/controller-listematch.php"><button class="btn btn-primary">Liste des Matchs</button></a>
-        </div>
-    </div>
-    <div class="row m-4">
-        <div class="col-6 ">
-            <a href="../controllers/controller-ajoutEvent.php"><button class="btn btn-primary my-md-2">Ajouter un Évenements</button></a>
-            <a href="../controllers/controller-listeEvent.php"><button class="btn btn-primary">Liste des Évenements</button></a>
+        <div class=" d-flex justify-content-between mt-4">
+            <button class=" btn-dark">Modifier</button>
+            <button class=" btn-danger">Supprimer</button>
         </div>
     </div>
-    <div class="row m-4">
-        <div class="col-6">
-            <a href="../controllers/controller-addAlbum.php"><button class="btn btn-primary">Ajouter un Album Photos</button></a>
-            <a href="../controllers/controller-listeAlbum.php"><button class="btn btn-primary">Liste des Albums Photos</button></a>
+    <div class="BottomBtn d-flex mx-auto mt-5 mb-4">
+        <a href="" class=" d-flex text-light BtnView"><i class="fi fi-rr-list"></i>Tous les matchs</a>
+        <div class="RightBtn  d-flex">
+            <a href="" class=" d-flex text-light BtnAdd"><i class="fi fi-rr-plus"></i>Ajouter</a>
         </div>
     </div>
-    <div class="row m-4">
-        <div class="col-6">
-            <a href="../controllers/controller-addPhotos.php"><button class="btn btn-primary">Ajouter des photos </button></a>
-            
-        </div>
-    </div>
-    <div class="row m-4">
-        <div class="col-12">
-            <a href="../controllers/controller-admindisconnection.php"><button class="btn btn-primary text-uppercase">déconnexion</button></a>
-        </div>
-    </div>
-    
+
 </div>
+<div class="container row mx-auto justify-content-between text-center bg-light shadow mb-5">
+    <h1 class="text-center p-4">Actualités</h1>
+    <div class=" col-lg-3">
+        <div class="container text-center containerMatchs bg-secondary ">
+            <p>match</p>
+            <p>azdazd</p>
+        </div>
+        <div class=" d-flex justify-content-between mt-4">
+            <button class=" btn-dark">Modifier</button>
+            <button class=" btn-danger">Supprimer</button>
+        </div>
+    </div>
+
+    <div class="BottomBtn d-flex mx-auto mt-5 mb-4">
+        <a href="" class=" d-flex text-light BtnView"><i class="fi fi-rr-list"></i>Toutes les Actus</a>
+        <div class="RightBtn  d-flex">
+            <a href="" class=" d-flex text-light BtnAdd"><i class="fi fi-rr-plus"></i>Ajouter</a>
+        </div>
+    </div>
+
+</div>
+<div class="container row mx-auto justify-content-between text-center bg-light shadow">
+    <h1 class="text-center p-4">Album Photo</h1>
+   <div class=" col-lg-3 ">
+        <div class="container text-center containerMatchs bg-secondary ">
+            <p>match</p>
+            <p>azdazd</p>
+        </div>
+        <div class=" d-flex justify-content-between mt-4">
+            <button class=" btn-dark">Ajouter</button>
+            <button class=" btn-danger">Supprimer</button>
+        </div>
+    </div>
+    <div class="BottomBtn d-flex mx-auto mt-5 mb-4">
+        <a href="" class=" d-flex text-light BtnView"><i class="fi fi-rr-list"></i>Tous les Albums</a>
+        <div class="RightBtn  d-flex">
+            <a href="" class=" d-flex text-light BtnAdd"><i class="fi fi-rr-plus"></i>Ajouter</a>
+        </div>
+    </div>
+
+</div>
+
+
 
 
 

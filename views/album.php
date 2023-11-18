@@ -20,12 +20,26 @@
         ?>
           <div class="col">
             <div class="card shadow-sm">
-              <img class="bd-placeholder-img card-img-top" width="100%" src="<?= '../assets/albumPhoto/' . $album['alb_name'] . '/' . Album::getAlbumPhotos($album['alb_id'])[0]['pho_name']  ?>" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+              <?php
+              if (count(Album::getAlbumPhotos($album['alb_id'])) > 0) {
+              ?>
+                <img class="bd-placeholder-img card-img-top" width="100%" src="<?= '../assets/albumPhoto/' . $album['alb_name'] . '/' . Album::getAlbumPhotos($album['alb_id'])[0]['pho_name']  ?>" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <?php } else { ?>
+                <img class="bd-placeholder-img card-img-top" width="100%" src="../assets/image/im6.jpg">
+
+              <?php } ?>
+
+
+
+
+
+
               <div class="card-body">
                 <p class="card-text text-uppercase fs-5"><?= $album['alb_name'] ?></p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="../controllers/controller-photoPage.php?album=<?=$album['alb_id']?>"><button type="button" class="btn btn-sm btn-outline-secondary">+ photos</button></a>
+                    <a href="../controllers/controller-photoPage.php?album=<?= $album['alb_id'] ?>"><button type="button" class="btn btn-sm btn-outline-secondary">+ photos</button></a>
 
                   </div>
                   <small class="text-muted">9 mins</small>

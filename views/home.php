@@ -17,7 +17,7 @@
 <div class="matchHomePage">
     <div class="title">
         <a href="">
-            <p class="text-light">resultat du week-end</p>
+            <p class="text-light fontSize">resultat du week-end</p>
         </a>
     </div>
     <div class="row justify-content-evenly matchs col-10 mx-auto">
@@ -45,9 +45,9 @@
                 </p>
 
                 <div class="row d-flex align-items-center centerDiv">
-                    <div class="col-4">
+                    <div class="col-lg-4 col-6">
                         <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_logo']); ?>" alt="" width="35%">
-                        <p class="Equipes1"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
+                        <p class="Equipes1 overflow-hidden"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
                     </div>
                     <div class="col-4 d-flex flex-row justify-content-between fs-2 ">
                         <p><?= htmlspecialchars($battle['score_equipe1']) ?></p>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-4">
                         <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_logo']); ?>" alt="" width="35%">
-                        <p class="Equipes1"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
+                        <p class="Equipes1 overflow-hidden"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
                     </div>
                 </div>
                 <p>
@@ -103,14 +103,14 @@
                     <div class="row d-flex align-items-center centerDiv">
                         <div class="col-4">
                             <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_logo']); ?>" alt="" width="35%">
-                            <p class="Equipes1"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
+                            <p class="Equipes1 overflow-hidden"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
                         </div>
                         <div class="col-4">
                             <p>-</p>
                         </div>
                         <div class="col-4">
                             <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_logo']); ?>" alt="" width="35%">
-                            <p class="Equipes1"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
+                            <p class="Equipes1 overflow-hidden"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
                         </div>
                     </div>
                     <p>

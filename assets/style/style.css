@@ -21,13 +21,15 @@
     background-color: #0174BE !important;
  }
 
-
+.fontSize{
+    font-size: 3.2rem;
+}
 
  /* NavBar */
 
  .navbar {
     background: rgb(0,80,135);
-background: linear-gradient(90deg, rgba(0,80,135,1) 0%, rgba(0,151,255,1) 100%);
+    background: linear-gradient(90deg, rgba(0,80,135,1) 0%, rgba(0,151,255,1) 100%);
      color: #FFF;
  }
 
