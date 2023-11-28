@@ -23,7 +23,6 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    
                     <label for="formFile" class="form-label"></label>
                     <input class="form-control" type="file" id="formFileMultiple" name="fileToUpload[]" id="fileToUpload" multiple>
                     <span class="text-danger fs-5"><?= $uploadMessage ?? "" ?></span>
@@ -38,7 +37,7 @@
             <a href="../controllers/controller-paneladmin.php" class="btnModify text-center">retour</a>
         </div>
     <?php } else { ?>
-        <p class="text-success fs-2 text-center text-uppercase mt-5">Les photos ont bien été ajouté a l'album</p>
+        <p class="text-light fs-2 text-center text-uppercase mt-5">Les photos ont bien été ajouté a l'album</p>
         <div class="text-center">
         <a href="../controllers/controller-paneladmin.php" class="btnModify text-center">retour</a>
         </div>

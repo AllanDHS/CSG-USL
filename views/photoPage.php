@@ -14,7 +14,7 @@
 </div>
     </div>
 </section>
-<div class="album py-3 bg-light row">
+<div class="album py-3 bg-light row justify-content-center">
 
     <?php foreach (Album::getAlbumPhotos($alb_id) as $photo) : ?>
 

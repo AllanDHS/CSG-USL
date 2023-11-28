@@ -115,7 +115,7 @@
         </div>
 
     <?php } else { ?>
-        <p class="text-success fs-2 text-center text-uppercase mt-5">Le match a bien été modifié</p>
+        <p class="text-light fs-2 text-center text-uppercase mt-5">Le match a bien été modifié</p>
         <div class="text-center">
         <a href="../controllers/controller-paneladmin.php" class="btnModify text-center">retour</a>
         </div>

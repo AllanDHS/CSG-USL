@@ -41,9 +41,10 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="../controllers/controller-bureau.php">Bureau</a></li>
-                        <li><a class="dropdown-item" href="#">Documents d'inscription</a></li>
-                        <li><a class="dropdown-item" href="#">Tarif des licences</a></li>
-                        <li><a class="dropdown-item" href="#">Arbitrage</a></li>
+                        <!-- <li><a class="dropdown-item" href="#">Documents d'inscription</a></li>
+                        <li><a class="dropdown-item" href="#">Tarif des licences</a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#">Arbitrage</a></li> -->
+                        <li><a class="dropdown-item" href="https://www.ffhandball.fr/" target="_blank">FFHB</a></li>
                         <li><a class="dropdown-item" href="../controllers/controller-paneladmin.php">Panel Admin</a></li>
                     </ul>
                 </li>
