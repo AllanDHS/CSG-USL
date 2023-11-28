@@ -114,7 +114,9 @@
 
     <?php } else { ?>
         <p class="text-success fs-2 text-center text-uppercase mt-5">Le match a bien été ajouté</p>
-        <a href="../controllers/controller-listematch.php" class="btnModify text-center">retour</a>
+        <div class="text-center">
+        <a href="../controllers/controller-paneladmin.php" class="btnModify text-center">retour</a>
+        </div>
     <?php } ?>
 </form>
 

@@ -17,7 +17,7 @@ require_once "../models/photos.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    if (isset($_POST['delete'])) {
+    if (isset($_POST['deleteAlb'])) {
         if (isset($_POST['alb_id']) && !empty($_POST['alb_id'])) {
             $directoryToDelete = '../assets/albumPhoto/' . Album::getAlbumName($_POST['alb_id']);
             Form::deleteDirectory($directoryToDelete);

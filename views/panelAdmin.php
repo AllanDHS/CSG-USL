@@ -70,7 +70,7 @@
                                     <form action="" method="post">
                                         <input type="hidden" name="idBattle" value="<?= $battle['bat_id'] ?>">
                                         <input type="hidden" name="idMatch" value="<?= $battle['mat_id'] ?>">
-                                        <button type="submit" class="btnDelete" name="delete">Supprimer</button>
+                                        <button type="submit" class="btnDelete" name="deleteBattle">Supprimer</button>
                                     </form>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
 
 </div>
 <div class="container row mx-auto justify-content-between text-center bg-light shadow mb-5 mt-5">
-    <h1 class="text-center p-4">actualités</h1>
+    <h1 class="text-center p-4">Actualités</h1>
     <div class="row justify-content-evenly col-10 mx-auto">
         <?php
         $count = 0;
@@ -133,7 +133,7 @@
                                     <button type="button" class="btnModify" data-bs-dismiss="modal">Annuler</button>
                                     <form action="" method="post">
                                         <input type="hidden" name="actu_id" value="<?= $actu['actu_id'] ?>">
-                                        <button type="submit" class="btnDelete" name="delete">Supprimer</button>
+                                        <button type="submit" class="btnDelete" name="deleteActu">Supprimer</button>
                                     </form>
                                 </div>
                             </div>
@@ -203,7 +203,7 @@
                                                 <button type="button" class="btnModify" data-bs-dismiss="modal">Annuler</button>
                                                 <form action="" method="post">
                                                     <input type="hidden" name="alb_id" value="<?= $album['alb_id'] ?>">
-                                                    <button type="submit" class="btnDelete" name="delete">Supprimer</button>
+                                                    <button type="submit" class="btnDelete" name="deleteAlb">Supprimer</button>
                                                 </form>
                                             </div>
                                         </div>

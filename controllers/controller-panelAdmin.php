@@ -23,7 +23,7 @@ require_once "../models/album.php";
 
 
 
-if (isset ($_POST['delete'])){
+if (isset ($_POST['deleteBattle'])){
 
     if (isset($_POST['idBattle']) && !empty($_POST['idBattle']))
     Matchs::deleteBattle($_POST['idBattle']);
@@ -35,7 +35,7 @@ if (isset ($_POST['delete'])){
 }
 
 
-if (isset ($_POST['delete'])){
+if (isset ($_POST['deleteActu'])){
 
     Form::deleteFile('../assets/imageActu/', Actu::getActuById($_POST['actu_id'])['actu_pictures']);
 
@@ -49,9 +49,9 @@ if (isset ($_POST['delete'])){
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    var_dump($_POST);
+    
 
-    if (isset($_POST['delete'])) {
+    if (isset($_POST['deleteAlb'])) {
         if (isset($_POST['alb_id']) && !empty($_POST['alb_id'])) {
             $directoryToDelete = '../assets/albumPhoto/' . Album::getAlbumName($_POST['alb_id']);
             Form::deleteDirectory($directoryToDelete);

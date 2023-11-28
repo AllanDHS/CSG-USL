@@ -35,10 +35,13 @@
 
         <div class="text-center">
             <button type="submit" class="btn btn-primary text-uppercase">Ajouter</button>
+            <a href="../controllers/controller-paneladmin.php" class="btnModify text-center">retour</a>
         </div>
     <?php } else { ?>
         <p class="text-success fs-2 text-center text-uppercase mt-5">Les photos ont bien été ajouté a l'album</p>
-        <a href="../controllers/controller-listeEvent.php" class="btnModify text-center">retour</a>
+        <div class="text-center">
+        <a href="../controllers/controller-paneladmin.php" class="btnModify text-center">retour</a>
+        </div>
     <?php } ?>
 
 </form>

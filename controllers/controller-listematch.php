@@ -20,7 +20,7 @@ if (!isset($_SESSION['admin'])) {
     exit();
 }
 
-if (isset ($_POST['delete'])){
+if (isset ($_POST['deleteBattle'])){
 
     if (isset($_POST['idBattle']) && !empty($_POST['idBattle']))
     Matchs::deleteBattle($_POST['idBattle']);

@@ -26,7 +26,9 @@
 
     <?php } else { ?>
         <p class="text-success fs-2 text-center text-uppercase mt-5">L'album a bien été ajouté</p>
-        <a href="../controllers/controller-listeEvent.php" class="btnModify text-center">retour</a>
+        <div class="text-center">
+        <a href="../controllers/controller-paneladmin.php" class="btnModify text-center">retour</a>
+        </div>
     <?php } ?>
 
 </form>
