@@ -19,8 +19,6 @@ if (!isset($_SESSION['admin'])) {
     exit();
 }
 
-var_dump($_POST);
-
 // Nous définissons le tableau d'erreurs
 $errors = [];
 
@@ -68,20 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $errors['equ_id_equipes'] = 'Les équipes doivent être différentes';
     }
 
-    // if (empty($_POST['score_equipe1'])) {
-    //     $errors['score_equipe1'] = 'Champs obligatoire';
-    // } if ($_POST['score_equipe1'] < 0) {
-    //     $errors['score_equipe1'] = 'Le score ne peut pas être négatif';
-    // } else if (strlen($_POST['score_equipe1']) > 2 ){
-    //     $errors['score_equipe1'] = 'Le score ne peut pas faire plus de 2 caracteres';}
-
-    // if (empty($_POST['score_equipe2'])) {
-    //     $errors['score_equipe2'] = 'Champs obligatoire';
-    // } else if ($_POST['score_equipe2'] < 0 ) {
-    //     $errors['score_equipe2'] = 'Le score ne peut pas être négatif';
-    // } else if (strlen($_POST['score_equipe2']) > 2 ){
-    //     $errors['score_equipe2'] = 'Le score ne peut pas faire plus de 2 caracteres';
-    // }
 
 
     if (count($errors) == 0) {
@@ -97,7 +81,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
+    // if (empty($_POST['score_equipe1'])) {
+    //     $errors['score_equipe1'] = 'Champs obligatoire';
+    // } if ($_POST['score_equipe1'] < 0) {
+    //     $errors['score_equipe1'] = 'Le score ne peut pas être négatif';
+    // } else if (strlen($_POST['score_equipe1']) > 2 ){
+    //     $errors['score_equipe1'] = 'Le score ne peut pas faire plus de 2 caracteres';}
 
+    // if (empty($_POST['score_equipe2'])) {
+    //     $errors['score_equipe2'] = 'Champs obligatoire';
+    // } else if ($_POST['score_equipe2'] < 0 ) {
+    //     $errors['score_equipe2'] = 'Le score ne peut pas être négatif';
+    // } else if (strlen($_POST['score_equipe2']) > 2 ){
+    //     $errors['score_equipe2'] = 'Le score ne peut pas faire plus de 2 caracteres';
+    // }
 
 
 

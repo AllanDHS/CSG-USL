@@ -86,7 +86,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $showForm = false;
 
             // insertion des données dans la table matchs
-            var_dump($_POST);
             $match = new Matchs();
             $match->updateMatch($_POST);
         }

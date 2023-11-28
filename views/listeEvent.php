@@ -15,8 +15,6 @@
                     <th scope="col">contenue</th>
                     <th scope="col" class="text-center">Image</th>
                     <th scope="col"></th>
-                    <th scope="col"></th>
-
                 </tr>
             </thead>
             <tbody>

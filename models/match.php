@@ -57,6 +57,11 @@ class Matchs
         }
     }
 
+
+
+
+
+
     /**
      * Récupération de tous les matchs
      * @return array tableau contenant tous les matchs
@@ -96,6 +101,9 @@ class Matchs
             echo "Erreur : " . $e->getMessage();
         }
     }
+
+
+
 
 
     /**
@@ -147,6 +155,11 @@ class Matchs
     }
 
 
+
+
+
+
+
     /**
      * Récupération des informations d'un battle grace a son id
      * @param int $id identifiant du battle
@@ -190,9 +203,9 @@ class Matchs
 
 
     /**
-     * Suppression d'un match
-     * @param int $id identifiant du match à supprimer
-     * @return bool Retourne true si le match a bien été supprimé, sinon false
+     * Suppression d'un battle
+     * @param int $id identifiant du battle à supprimer
+     * @return bool Retourne true si le battle a bien été supprimé, sinon false
      */
     public static function deleteBattle(int $id): bool
     {
@@ -201,7 +214,7 @@ class Matchs
             // Création d'une instance PDO
             $pdo = Database::createInstancePDO();
 
-            // Requête préparée pour supprimer un match
+            // Requête préparée pour supprimer un battle
             $sql = "DELETE FROM `battle` WHERE `bat_id` = :bat_id";
 
             // Préparation de la requête
@@ -213,7 +226,7 @@ class Matchs
             // Exécution de la requête préparée
             $stmt->execute();
 
-            // Retourne true si le match a bien été supprimé
+            // Retourne true si le battle a bien été supprimé
             return true;
         } catch (PDOException $e) {
             echo "Erreur : " . $e->getMessage();
@@ -221,6 +234,15 @@ class Matchs
         }
     }
 
+
+
+
+    
+    /**
+     * Suppression d'un match
+     * @param int $id identifiant du match à supprimer
+     * @return bool Retourne true si le match a bien été supprimé, sinon false
+     */
 
     public static function deleteMatchs(int $id): bool
     {

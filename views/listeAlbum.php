@@ -26,7 +26,7 @@
                         <td class="text-center"></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <a href="../controllers/controller-modifyEvent.php?idActu="><button class="btnModify">Ajouter Photos</button></a>
+                                <a href="../controllers/controller-addPhotos.php?idAlbum=<?= $album['alb_id']?>"><button class="btnModify">Ajouter Photos</button></a>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?= $album['alb_id'] ?>">
                                     Supprimer

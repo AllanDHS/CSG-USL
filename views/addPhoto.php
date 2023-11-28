@@ -16,7 +16,7 @@
 
                             <?php foreach (Album::getAllAlbums() as $album) { ?>
 
-                                <option value="<?= $album['alb_id'] ?>" <?= isset($_POST['alb_id']) && $_POST['alb_id'] == $album['alb_id'] ? 'selected' : '' ?>><?= ucfirst($album['alb_name']) ?> </option>
+                                <option <?= $albumId == $album['alb_name'] ? "selected" : "" ?> value="<?= $album['alb_id'] ?>" <?= isset($_POST['alb_id']) && $_POST['alb_id'] == $album['alb_id'] ? 'selected' : '' ?>><?= ucfirst($album['alb_name']) ?> </option>
                             <?php } ?>
                         </select>
                         <span class="text-danger fs-5"><?= $errors['alb_name'] ?? "" ?></span>

@@ -33,6 +33,10 @@ class Actu
     }
 
 
+
+
+    
+
     /**
      * Récupération de tous les event
      * @return array tableau contenant tous les event
@@ -47,11 +51,6 @@ class Actu
         $actu = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $actu;
     }
-
-
-
-
-
 
 
     /**

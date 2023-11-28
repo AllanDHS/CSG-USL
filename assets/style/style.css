@@ -22,7 +22,7 @@
  }
 
 .fontSize{
-    font-size: 3.2rem;
+    font-size: 2.2rem;
 }
 
  /* NavBar */
@@ -134,16 +134,16 @@
      box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
  }
 
+.centerdiv {
+    width: 100%;
+ }
+
+
 
  .container-fluid {
      text-align: center;
  }
 
- .row {
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
- }
 
  .title {
      font-size: 20px;
@@ -213,7 +213,7 @@
  .tableaux p {
      margin-top: 1rem;
      text-transform: uppercase;
-     color: #0785D9;
+     color: #FFF;
      font-weight: 700;
      font-size: 20px;
  }
@@ -227,24 +227,13 @@
 
  }
 
+ 
+
 
  .container input {
      width: 300px;
  }
 
- .container .btn {
-
-     border: solid 1px #0785D9;
-
- }
-
- .container .btn:hover {
-     background: #0785D9;
-     color: #fff;
-     transition: all 0.5s ease;
-     font-size: large;
-
- }
 
  .container input:focus {
      border-bottom: 2px solid #0785D9;
@@ -297,16 +286,6 @@
      border: 1px solid #FF0000;
      transition: all 0.5s ease;
  }
-
-
-
-
-
-
-
-
-
-
 
  .classMargin {
      margin: 0 auto;
@@ -363,7 +342,6 @@
      display: inline-block;
      text-align: center;
      border-radius: 50%;
-     border: 1px solid #ccc;
      margin: 0 8px;
      color: inherit;
      opacity: 0.75;
@@ -379,7 +357,7 @@
      margin-top: 15px;
      text-align: center;
      font-size: 13px;
-     color: #aaa;
+     color: #ffffff;
      margin-bottom: 0;
  }
 
@@ -388,6 +366,13 @@
 
 
  @media screen and (max-width:390px) {
+
+    .d-flex{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+
      #carrousel {
          display: none;
      }

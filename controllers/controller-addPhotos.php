@@ -16,6 +16,19 @@ require_once "../helpers/form.php";
 require_once "../models/album.php";
 require_once "../models/photos.php";
 
+if (isset ($_GET['idAlbum'])){
+
+    $idAlbum = $_GET['idAlbum'];
+
+    $album = Album::getAlbumName($idAlbum);
+
+    $albumId = $album['alb_id'];
+
+// } else {
+//     header('Location: ../controllers/controller-listeAlbum.php');
+//     exit();
+}
+
 
 // Nous définissons le tableau d'erreurs
 $errors = [];

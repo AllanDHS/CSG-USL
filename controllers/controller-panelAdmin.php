@@ -18,6 +18,50 @@ require_once "../models/categories_equipes.php";
 require_once "../models/competitions.php";
 require_once "../models/equipes.php";
 require_once "../models/match.php";
+require_once "../models/actualite.php";
+require_once "../models/album.php";
+
+
+
+if (isset ($_POST['delete'])){
+
+    if (isset($_POST['idBattle']) && !empty($_POST['idBattle']))
+    Matchs::deleteBattle($_POST['idBattle']);
+
+    if (isset($_POST['idMatch']) && !empty($_POST['idMatch']))
+    Matchs::deleteMatchs($_POST['idMatch']);
+
+
+}
+
+
+if (isset ($_POST['delete'])){
+
+    Form::deleteFile('../assets/imageActu/', Actu::getActuById($_POST['actu_id'])['actu_pictures']);
+
+    if (isset($_POST['actu_id']) && !empty($_POST['actu_id']))
+    Actu::deleteActu($_POST['actu_id']);
+
+
+
+}
+
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    var_dump($_POST);
+
+    if (isset($_POST['delete'])) {
+        if (isset($_POST['alb_id']) && !empty($_POST['alb_id'])) {
+            $directoryToDelete = '../assets/albumPhoto/' . Album::getAlbumName($_POST['alb_id']);
+            Form::deleteDirectory($directoryToDelete);
+            
+            Album::deleteAlbum($_POST['alb_id']);
+        }
+    }
+}
+
+
 
 // Récupération de tous les matchs
 $matchs = Matchs::getAllBattles();

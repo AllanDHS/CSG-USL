@@ -46,16 +46,16 @@
 
                 <div class="row d-flex align-items-center centerDiv">
                     <div class="col-lg-4 col-6">
-                        <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_logo']); ?>" alt="" width="35%">
+                        <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_logo']); ?>" alt="" width="35%" class="">
                         <p class="Equipes1 overflow-hidden"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id'])['equ_name']); ?></p>
                     </div>
-                    <div class="col-4 d-flex flex-row justify-content-between fs-2 ">
+                    <div class="col-4 d-flex flex-row justify-content-between">
                         <p><?= htmlspecialchars($battle['score_equipe1']) ?></p>
                         <p>-</p>
                         <p><?= htmlspecialchars($battle['score_equipe2']) ?></p>
                     </div>
                     <div class="col-4">
-                        <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_logo']); ?>" alt="" width="35%">
+                        <img src="<?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_logo']); ?>" alt="" width="35%" class="">
                         <p class="Equipes1 overflow-hidden"><?= htmlspecialchars(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name']); ?></p>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
     <div class="matchHomePage">
         <div class="title">
             <a href="">
-                <p class="text-light">Match a venir</p>
+                <p class="text-light fontSize">Match a venir</p>
             </a>
         </div>
         <div class="row justify-content-evenly matchs col-10  mx-auto ">
@@ -128,7 +128,7 @@
 <div class="container scoreContainer">
     <div class="title">
         <a href="">
-            <p class="text-light">nos dernière Actualités</p>
+            <p class="text-light fontSize">nos dernière Actualités</p>
         </a>
     </div>
     <div class="row justify-content-evenly col-12 mx-auto">
@@ -141,7 +141,7 @@
                 break;
             }
         ?>
-            <div class="col-lg-5 d-flex flex-column position-static py-3 bg-light containerActu">
+            <div class="col-lg-5 d-flex flex-column position-static py-3 bg-light containerActu m-3">
                 <p class="mb-0 text-primary fs-3"><?= htmlspecialchars($actu['actu_type']) ?></p>
                 <div class="mb-1 text-muted fs-5"><?= htmlspecialchars($actu['actu_date']) ?></div>
                 <p><?= htmlspecialchars($actu['actu_title']) ?></p>

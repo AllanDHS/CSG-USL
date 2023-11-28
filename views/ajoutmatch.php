@@ -5,7 +5,7 @@
 
 <div class="row">
     <div class="col-12 text-center mt-4 text-uppercase fs-2">
-        <p>ajouter un match!!!!!/p>
+        <p>ajouter un match</p>
     </div>
 </div>
 
@@ -107,9 +107,9 @@
             </div>
         </div>
 
-        <div class="d-flex justify-content-evenly mt-5">
+        <div class="d-flex justify-content-evenly mt-5 mb-5">
             <button type="submit" class="btnModify">Sauvegarder</button>
-            <a href="../controllers/controller-paneladmin.php" class="btnDelete">Annuler</a>
+            <a href="../controllers/controller-listematch.php" class="btnDelete">Annuler</a>
         </div>
 
     <?php } else { ?>

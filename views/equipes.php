@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-4 p-0">
                     <div class="card mb-4" style="width: 25rem;">
-                        <img src="../assets/image/no-img.jpg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/im6.jpg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">-17 ans</h5>
                         </div>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-md-4 p-0">
                     <div class="card mb-4" style="width: 25rem;">
-                        <img src="../assets/image/-15m.jpg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/im8.jpg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">-15 ans</h5>
                         </div>
@@ -43,7 +43,7 @@
             <div class="row align-items-center justify-content-center p-0">
                 <div class="col-md-4 ">
                     <div class="card mb-4" style="width: 25rem;">
-                        <img src="../assets/image/-13g.jpeg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/im10.jpg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">-13 ans</h5>
                         </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-md-4 ">
                     <div class="card mb-4" style="width: 25rem;">
-                        <img src="../assets/image/-11.jpg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/im12.jpg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">-11 ans</h5>
                         </div>
@@ -69,7 +69,7 @@
             <div class="row p-0 ">
                 <div class="col-md-4 ">
                     <div class="card mb-4" style="width: 25rem;">
-                        <img src="../assets/image/seniorF.jpg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/im4.jpg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">Séniors</h5>
                         </div>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4" style="width: 25rem;">
-                        <img src="../assets/image/-17f.jpg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/im7.jpg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">-17 ans</h5>
                         </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4" style="width: 25rem;">
-                        <img src="../assets/image/-15f.jpg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/im9.jpg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">-15 ans</h5>
                         </div>
@@ -97,7 +97,7 @@
             <div class="row align-items-center justify-content-center p-0">
                 <div class="col-md-4 ">
                     <div class="card mb-4" style="width: 25rem;">
-                        <img src="../assets/image/-13f.jpg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/im11.jpg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">-13 ans</h5>
                         </div>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-md-4 ">
                     <div class="card mb-4 " style="width: 25rem;">
-                        <img src="../assets/image/-11f.jpg" class="card-img-top custom-img-size" alt="...">
+                        <img src="../assets/image/im13.jpg" class="card-img-top custom-img-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fs-4">-11 ans</h5>
                         </div>
@@ -122,7 +122,7 @@
         <div class="row justify-content-center m-0 p-0">
             <div class="col-md-4  p-0">
                 <div class="card mb-4" style="width: 25rem;">
-                    <img src="../assets/image/loisirs.jpg" class="card-img-top custom-img-size" alt="...">
+                    <img src="../assets/image/im5.jpg" class="card-img-top custom-img-size" alt="...">
                     <div class="card-body">
                         <h5 class="card-title fs-4">Loisirs</h5>
                     </div>

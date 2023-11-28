@@ -18,8 +18,6 @@
                     <th scope="col">Score Equipe 1</th>
                     <th scope="col">Score Equipe 2</th>
                     <th scope="col"></th>
-                    <th scope="col"></th>
-
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +35,8 @@
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <a href="../controllers/controller-modifyMatch.php?idBattle=<?=$battle['bat_id']?>"><button class="btnModify">Modifier</button></a>
+
+                                
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?=$battle['bat_id']?>">
                                     Supprimer
@@ -51,11 +51,11 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Voulez-vous vraiment supprimer le matchs ?</p>
+                                                <p>Voulez-vous vraiment supprimer le match ?</p>
                                                 <p><?=(Equipe::getEquipesInfo($battle['equ_id'])['equ_name'])?> vs <?=(Equipe::getEquipesInfo($battle['equ_id_equipes'])['equ_name'])?></p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btnModify" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btnModify" data-bs-dismiss="modal">Fermer</button>
                                                 <form action="" method="post">
                                                     <input type="hidden" name="idBattle" value="<?=$battle['bat_id']?>">
                                                     <input type="hidden" name="idMatch" value="<?=$battle['mat_id']?>">
@@ -75,7 +75,7 @@
 </div>
 
 
-<div class="text-center mt-5">
+<div class="text-center mt-5 mb-5">
     <a href="../controllers/controller-ajoutmatch.php"><button class="btnModify">Ajouter un match</button></a>
     <a href="../controllers/controller-paneladmin.php"><button class="btnDelete">Annuler</button></a>
 </div>
