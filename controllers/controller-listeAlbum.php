@@ -16,7 +16,6 @@ require_once "../models/photos.php";
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    var_dump($_POST);
 
     if (isset($_POST['delete'])) {
         if (isset($_POST['alb_id']) && !empty($_POST['alb_id'])) {

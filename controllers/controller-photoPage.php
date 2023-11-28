@@ -26,4 +26,5 @@ $alb_id = $_GET['album'];
 
 
 
+
 include "../views/photoPage.php";

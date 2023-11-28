@@ -16,7 +16,7 @@
             }
         ?>
 
-            <div class="text-center col-lg-3 col-6 containerMatchs bg-light">
+            <div class="text-center col-lg-3 col-12 containerMatchs bg-light">
                 <p>
                     <?= htmlspecialchars(Categories::getCategorieById($battle['cat_id'])['cat_name']); ?>
                 </p>
@@ -85,9 +85,9 @@
         endforeach; ?>
     </div>
     <div class="BottomBtn d-flex mx-auto">
-        <a href="../controllers/controller-listematch.php" class=" d-flex text-light BtnView"><i class="fi fi-rr-list"></i>Tous les matchs</a>
-        <div class="RightBtn  d-flex">
-            <a href="../controllers/controller-ajoutmatch.php" class=" d-flex text-light BtnAdd"><i class="fi fi-rr-plus"></i>Ajouter</a>
+        <a href="../controllers/controller-listematch.php" class=" d-flex text-light BtnView"><i class="fi fi-rr-list d-none d-md-block"></i>Tous les matchs</a>
+        <div class="RightBtn  d-flex m-3 m-lg-1">
+            <a href="../controllers/controller-ajoutmatch.php" class=" d-flex text-light BtnAdd"><i class="fi fi-rr-plus d-none d-md-block"></i>Ajouter</a>
         </div>
     </div>
 </div>
@@ -96,7 +96,7 @@
 </div>
 <div class="container row mx-auto justify-content-between text-center bg-light shadow mb-5 mt-5">
     <h1 class="text-center p-4">actualités</h1>
-    <div class="row justify-content-evenly col-12 mx-auto">
+    <div class="row justify-content-evenly col-10 mx-auto">
         <?php
         $count = 0;
         foreach (Actu::getAllActu() as $actu) :
@@ -104,7 +104,7 @@
                 break;
             }
         ?>
-            <div class="col-lg-5 d-flex flex-column position-static py-3 bg-light containerActu m-3">
+            <div class="col-lg-5 col-12 d-flex flex-column position-static py-3 bg-light containerActu m-3">
                 <p class="mb-0 text-primary fs-3"><?= htmlspecialchars($actu['actu_type']) ?></p>
                 <div class="mb-1 text-muted fs-5"><?= htmlspecialchars($actu['actu_date']) ?></div>
                 <p><?= htmlspecialchars($actu['actu_title']) ?></p>
@@ -148,9 +148,9 @@
     </div>
 
     <div class="BottomBtn d-flex mx-auto mt-5 mb-4">
-        <a href="../controllers/controller-listeEvent.php" class=" d-flex text-light BtnView"><i class="fi fi-rr-list"></i>Toutes les Actus</a>
-        <div class="RightBtn  d-flex">
-            <a href="../controllers/controller-ajoutEvent.php" class="d-flex text-light BtnAdd"><i class="fi fi-rr-plus"></i>Ajouter</a>
+        <a href="../controllers/controller-listeEvent.php" class=" d-flex text-light BtnView"><i class="fi fi-rr-list d-none d-lg-block"></i>Toutes les Actus</a>
+        <div class="RightBtn  d-flex m-3 m-lg-1">
+            <a href="../controllers/controller-ajoutEvent.php" class="d-flex text-light BtnAdd"><i class="fi fi-rr-plus d-none d-md-block"></i>Ajouter</a>
         </div>
     </div>
 
@@ -226,9 +226,9 @@
 
 
     <div class="BottomBtn d-flex mx-auto mt-5 mb-4">
-        <a href="../controllers/controller-listeAlbum.php" class=" d-flex text-light BtnView"><i class="fi fi-rr-list"></i>Tous les Albums</a>
-        <div class="RightBtn  d-flex">
-            <a href="../controllers/controller-addAlbum.php" class=" d-flex text-light BtnAdd"><i class="fi fi-rr-plus"></i>Ajouter</a>
+        <a href="../controllers/controller-listeAlbum.php" class=" d-flex text-light BtnView"><i class="fi fi-rr-list d-none d-md-block"></i>Tous les Albums</a>
+        <div class="RightBtn d-flex m-3 m-lg-1">
+            <a href="../controllers/controller-addAlbum.php" class=" d-flex text-light BtnAdd"><i class="fi fi-rr-plus d-none d-md-block "></i>Ajouter</a>
         </div>
     </div>
 

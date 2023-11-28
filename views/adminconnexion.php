@@ -1,11 +1,11 @@
 <?php include "components/header.php" ?>
 <?php include "components/navbar.php" ?>
 
-<p class="fs-4 text-center text-capitalize lh-lg">connexion <br> admin</p>
+<p class="fs-4 text-center text-capitalize text-light m-3">connexion <br> admin</p>
 
 
 
-<div class="container text-center mx-auto p-2 containerForm">
+<div class="container text-center mx-auto p-2 containerForm bg-light">
 <form action="#" method="post">
   <div class="form-group mb-3">
     <label for="exampleInputEmail1"></label>
@@ -17,7 +17,7 @@
     <input type="password" class="form-control" id="adm_password" placeholder="Password" name="adm_password">
     <span class="text-danger fs-5"><?= $errors['adm_password'] ?? "" ?></span>
   </div>
-  <button type="submit" class="btn  mt-3">Connexion</button>
+  <button type="submit" class="btn btn-primary">Connexion</button>
 </form>
 </div>
 

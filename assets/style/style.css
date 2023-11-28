@@ -173,6 +173,11 @@
 }
 
 
+.containerForm{
+    border-radius: 10px;
+     box-shadow: black 0 0 2px;
+    }
+
 
 
  /* Section Actus */
@@ -367,6 +372,8 @@
 
  @media screen and (max-width:390px) {
 
+    
+
     .d-flex{
         flex-wrap: nowrap;
         justify-content: space-around;
@@ -400,4 +407,13 @@
      .Equipes1 {
          font-size: 13px;
      }
+
+     .bottomBtn a {
+            font-size: 13px;
+     }
+
+     a i{
+        display: none;
+     }
+
  }

@@ -16,17 +16,14 @@ require_once "../helpers/form.php";
 require_once "../models/album.php";
 require_once "../models/photos.php";
 
-if (isset ($_GET['idAlbum'])){
+if (isset($_GET['idAlbum'])) {
 
     $idAlbum = $_GET['idAlbum'];
-
-    $album = Album::getAlbumName($idAlbum);
-
-    $albumId = $album['alb_id'];
-
-// } else {
-//     header('Location: ../controllers/controller-listeAlbum.php');
-//     exit();
+    $albumName = Album::getAlbumName($idAlbum);
+    
+} else {
+    header('Location: ../controllers/controller-listeAlbum.php');
+    exit();
 }
 
 
@@ -48,7 +45,7 @@ if (isset($_FILES["fileToUpload"])) {
     $uploadMessage = '';
 
     $test = $_FILES['fileToUpload']['error'];
-    
+
 
     // Nous controlons que l'utilisateur a bien sélectionné une image à l'aide du code error, il doit être égal à 0
     if ($_FILES['fileToUpload']['error'][0] !== 0) {
@@ -64,7 +61,7 @@ if (isset($_FILES["fileToUpload"])) {
         // Nous initialisons la variable $uploadOk à true
         $uploadOk = true;
 
-        
+
 
         // création du répertoire avec le nom de l'album choisis si il n'existe pas
         if (!is_dir('../assets/albumPhoto/' . Album::getAlbumName($_POST['alb_id']))) {

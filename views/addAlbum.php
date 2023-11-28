@@ -1,11 +1,11 @@
 <?php include "components/header.php" ?>
 <?php include "components/navbar.php" ?>
 
-<h3 class="text-center mt-4 mb-4">Créer un Album</h3>
+<h3 class="text-center mt-4 mb-4 text-light">Créer un Album</h3>
 
 <form action="#" method="post">
     <?php if ($showForm) { ?>
-        <div class="container text-center p-2">
+        <div class="container text-center p-2 bg-light containerForm">
             <div class="row mb-3">
                 <div class="col">
                     <div class="form-group">
@@ -14,13 +14,16 @@
                         <span class="text-danger fs-5"><?= $errors['alb_name'] ?? "" ?></span>
                     </div>
                 </div>
+                <div class="text-center mt-5">
+                    <button type="submit" class="btn btn-primary text-uppercase">Créer</button>
+                    <a href="../controllers/controller-listeAlbum.php" class="btn btn-danger text-uppercase">Retour</a>
+                </div>
             </div>
+
         </div>
 
 
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary text-uppercase">Créer</button>
-        </div>
+
     <?php } else { ?>
         <p class="text-success fs-2 text-center text-uppercase mt-5">L'album a bien été ajouté</p>
         <a href="../controllers/controller-listeEvent.php" class="btnModify text-center">retour</a>

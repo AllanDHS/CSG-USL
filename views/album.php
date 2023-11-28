@@ -8,6 +8,7 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light text-light">L'album photo de l'entente</h1>
         <p class="lead text-muted">Retrouvez toutes les photos de la saison 2023-2024</p>
+        
       </div>
     </div>
   </section>
@@ -39,18 +40,20 @@
                 <p class="card-text text-uppercase fs-5"><?= $album['alb_name'] ?></p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="../controllers/controller-photoPage.php?album=<?= $album['alb_id'] ?>"><button type="button" class="btn btn-sm btn-outline-secondary">+ photos</button></a>
+                    <a href="../controllers/controller-photoPage.php?album=<?= $album['alb_id'] ?>"><button type="button" class="btn btn-sm btn-outline-secondary">Voir toutes les photos</button></a>
 
                   </div>
-                  <small class="text-muted">9 mins</small>
+                  
                 </div>
               </div>
             </div>
           </div>
         <?php endforeach; ?>
       </div>
+      
     </div>
   </div>
+  
 
 </main>
 

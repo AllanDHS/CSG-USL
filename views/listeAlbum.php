@@ -4,7 +4,7 @@
 
 
 <div class="container">
-    <h3 class="text-center p-4 fs-2">Liste des Album</h3>
+    <h3 class="text-center p-4 fs-2 text-light">Liste des Album</h3>
 
     <div class="table-responsive">
         <table class="table table-hover" style="min-height: 80%;">
@@ -14,7 +14,7 @@
                     <th scope="col">Titre de l'album</th>
                     <th scope="col" class="text-center"></th>
                     <th scope="col" class="text-center"></th>
-                    
+
 
                 </tr>
             </thead>
@@ -26,14 +26,14 @@
                         <td class="text-center"></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <a href="../controllers/controller-addPhotos.php?idAlbum=<?= $album['alb_id']?>"><button class="btnModify">Ajouter Photos</button></a>
+                                <a href="../controllers/controller-addPhotos.php?idAlbum=<?= $album['alb_id'] ?>"><button class="btnModify">Ajouter Photos</button></a>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btnDelete" data-bs-toggle="modal" data-bs-target="#modal<?= $album['alb_id'] ?>">
                                     Supprimer
                                 </button>
-                                
+
                                 <div class="modal fade" id="modal<?= $album['alb_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                
+
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -61,6 +61,10 @@
             </tbody>
         </table>
     </div>
+</div>
+<div class="text-center mt-5 mb-5">
+    <a href="../controllers/controller-addAlbum.php"><button class="btnModify">Ajouter un album</button></a>
+    <a href="../controllers/controller-paneladmin.php"><button class="btnDelete">Retour</button></a>
 </div>
 
 

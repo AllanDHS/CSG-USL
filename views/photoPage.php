@@ -5,10 +5,13 @@
 
 <section class="py-3 text-center container">
     <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
+        <div class="col-lg-6 col-md-8 mx-auto text-light">
             <h1 class="fw-light">L'album photo de l'entente</h1>
-            <p class="lead text-muted">Retrouvez toutes les photos de la saison 2023-2024</p>
+            <p class="lead ">Retrouvez toutes les photos de l'album</p>
         </div>
+        <div class="m-3">
+<a href="../controllers/controller-album.php" class="btn btn-dark fs-5">Retour</a>
+</div>
     </div>
 </section>
 <div class="album py-3 bg-light row">
@@ -23,7 +26,6 @@
         </div>
     <?php endforeach; ?>
 </div>
-
 
 
 <script>

@@ -8,7 +8,6 @@ require_once "../models/admin.php";
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    var_dump($_POST);
     if (isset($_POST['adm_login']) && !empty($_POST['adm_login']) && isset($_POST['adm_password']) && !empty($_POST['adm_password'])) {
 
         $adminInfos = Admin::getAdmin($_POST['adm_login']);

@@ -1,7 +1,7 @@
 <?php include "components/header.php" ?>
 <?php include "components/navbar.php" ?>
 
-<h3 class="text-center mt-4 mb-4">Ajouter des photos</h3>
+<h3 class="text-center mt-4 mb-4 text-light">Ajouter des photos</h3>
 
 
 <form action="#" method="post" enctype="multipart/form-data">
@@ -10,13 +10,13 @@
             <div class="row mb-3">
                 <div class="col">
                     <div class="form-group">
-                        <label for="alb_name" class="mb-2 text-uppercase">Album</label>
+                        <label for="alb_name" class="mb-2 text-uppercase text-light">Album</label>
                         <select name="alb_id" class="form-control" id="alb_id">
                             <option value="" selected disabled>Choisissez un Ablum </option>
 
                             <?php foreach (Album::getAllAlbums() as $album) { ?>
 
-                                <option <?= $albumId == $album['alb_name'] ? "selected" : "" ?> value="<?= $album['alb_id'] ?>" <?= isset($_POST['alb_id']) && $_POST['alb_id'] == $album['alb_id'] ? 'selected' : '' ?>><?= ucfirst($album['alb_name']) ?> </option>
+                                <option <?= $albumName == $album['alb_name'] ? "selected" : "" ?> value="<?= $album['alb_id'] ?>" <?= isset($_POST['alb_id']) && $_POST['alb_id'] == $album['alb_id'] ? 'selected' : '' ?>><?= ucfirst($album['alb_name']) ?> </option>
                             <?php } ?>
                         </select>
                         <span class="text-danger fs-5"><?= $errors['alb_name'] ?? "" ?></span>
