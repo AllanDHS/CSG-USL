@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col-12 text-center mt-4 text-uppercase fs-2">
-        <p>ajouter un Évenements</p>
+        <p>Modifier un Événement</p>
     </div>
 </div>
 

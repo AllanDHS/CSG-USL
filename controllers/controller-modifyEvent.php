@@ -32,7 +32,7 @@ if (isset($_GET['idActu'])) {
 $showForm = true;
 
 
-var_dump($actu_pictures);
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Nous définissons le tableau d'erreurs
@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Nous allons créer une variable qui contiendra le message du statut d'upload.
     $uploadMessage = '';
 
-    var_dump($_FILES);
+    
 
     // Nous recherchons si $_FILES["fileToUpload"] existe pour éviter toutes erreurs pour la suite
     if (isset($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["error"] !== 4) {
@@ -156,7 +156,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
 
         if (empty($errors)) {
-            var_dump('OK');
             $showForm = false;
             $actu_date = $_POST['actu_date'];
             $actu_title = $_POST['actu_title'];

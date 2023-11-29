@@ -17,7 +17,7 @@
 <div class="matchHomePage">
     <div class="title">
         <a href="">
-            <p class="text-light fontSize">resultat du week-end</p>
+            <p class="text-light fontSize">résultats du week-end</p>
         </a>
     </div>
     <div class="row justify-content-evenly matchs col-10 mx-auto">
@@ -72,7 +72,7 @@
     <div class="matchHomePage">
         <div class="title">
             <a href="">
-                <p class="text-light fontSize">Match a venir</p>
+                <p class="text-light fontSize">Matchs à venir</p>
             </a>
         </div>
         <div class="row justify-content-evenly matchs col-10  mx-auto ">
@@ -127,9 +127,9 @@
 </div>
 <div class="container scoreContainer">
     <div class="title">
-        <a href="">
-            <p class="text-light fontSize">nos dernière Actualités</p>
-        </a>
+        
+            <p class="text-light fontSize">nos dernières Actualités</p>
+        
     </div>
     <div class="row justify-content-evenly col-12 mx-auto">
 
