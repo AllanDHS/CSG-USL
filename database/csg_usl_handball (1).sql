@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : mar. 28 nov. 2023 à 12:25
+-- Généré le : dim. 17 déc. 2023 à 08:14
 -- Version du serveur : 5.7.39
 -- Version de PHP : 8.2.0
 
@@ -36,6 +36,13 @@ CREATE TABLE `actualites` (
   `actu_pictures` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `actualites`
+--
+
+INSERT INTO `actualites` (`actu_id`, `actu_type`, `actu_date`, `actu_title`, `actu_text`, `actu_pictures`) VALUES
+(10, 'Événements', '24/12/2023', 'Téléthon', 'Venez nous rejoindre à notre tournoi au profit du Téléthon', '65670c1b47a90.webp');
+
 -- --------------------------------------------------------
 
 --
@@ -66,14 +73,6 @@ CREATE TABLE `album` (
   `alb_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `album`
---
-
-INSERT INTO `album` (`alb_id`, `alb_name`) VALUES
-(15, 'allan'),
-(16, 'zadazdazd');
-
 -- --------------------------------------------------------
 
 --
@@ -95,8 +94,8 @@ CREATE TABLE `battle` (
 
 INSERT INTO `battle` (`bat_id`, `score_equipe1`, `score_equipe2`, `mat_id`, `equ_id`, `equ_id_equipes`) VALUES
 (51, 27, 21, 56, 14, 3),
-(52, 35, 30, 57, 14, 3),
-(53, 0, 0, 58, 2, 1);
+(56, 20, 10, 61, 1, 4),
+(60, 20, 10, 65, 14, 14);
 
 -- --------------------------------------------------------
 
@@ -168,7 +167,7 @@ CREATE TABLE `equipes` (
 --
 
 INSERT INTO `equipes` (`equ_id`, `equ_name`, `equ_logo`) VALUES
-(1, 'CSGravenchon /USL', 'https://media-logos-clubs.ffhandball.fr/128/2023-06-04-8287137a-8e0e-44b5-85e3-aeafcb8be129.webp'),
+(1, 'CSGravenchon /USL', 'https://media-logos-clubs.ffhandball.fr/128/2015-07-22-221685d7-41c2-49cc-9009-b93728a16d16.webp'),
 (2, 'Caen Venoix', 'https://media-logos-clubs.ffhandball.fr/128/2015-04-24-3d9559be-6e22-47e4-b4c5-11cfd6a0ac4a.webp'),
 (3, 'RC.Bolbec', 'https://media-logos-clubs.ffhandball.fr/128/2018-06-14-69f86b4a-e5a4-4b0f-b207-70cd6fd0efa0.webp'),
 (4, 'Rouen', 'https://media-logos-clubs.ffhandball.fr/64/2017-04-27-d0571b58-aa8b-45d0-80ec-28249c073b8f.webp'),
@@ -223,8 +222,8 @@ CREATE TABLE `matchs` (
 
 INSERT INTO `matchs` (`mat_id`, `mat_date`, `mat_place`, `com_id`, `cat_id`) VALUES
 (56, '2023-11-11 19:00:00', 'Gymnase Micheline Ostermeyer', 2, 1),
-(57, '2023-11-11 21:00:00', 'Gymnase Micheline Ostermeyer', 1, 1),
-(58, '2023-11-16 09:04:00', 'Lillebonne', 2, 7);
+(61, '2023-11-28 19:15:00', 'lillebonne', 4, 3),
+(65, '2023-11-29 11:00:00', 'lillebonne', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -328,7 +327,7 @@ ALTER TABLE `sponsors`
 -- AUTO_INCREMENT pour la table `actualites`
 --
 ALTER TABLE `actualites`
-  MODIFY `actu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `actu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `admin`
@@ -340,13 +339,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT pour la table `album`
 --
 ALTER TABLE `album`
-  MODIFY `alb_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `alb_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `battle`
 --
 ALTER TABLE `battle`
-  MODIFY `bat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `bat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT pour la table `categories_equipes`
@@ -370,13 +369,13 @@ ALTER TABLE `equipes`
 -- AUTO_INCREMENT pour la table `matchs`
 --
 ALTER TABLE `matchs`
-  MODIFY `mat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `mat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT pour la table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `pho_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `pho_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `sponsors`

@@ -59,7 +59,7 @@
                                                 <form action="" method="post">
                                                     <input type="hidden" name="idBattle" value="<?=$battle['bat_id']?>">
                                                     <input type="hidden" name="idMatch" value="<?=$battle['mat_id']?>">
-                                                    <button type="submit" class="btnDelete" name="delete">Supprimer</button>
+                                                    <button type="submit" class="btnDelete" name="deleteBattle">Supprimer</button>
                                                 </form>
                                             </div>
                                         </div>
