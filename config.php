@@ -5,7 +5,7 @@
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'csg_usl_handball');
 define('DB_USER', 'root');
-define('DB_PASS', 'root');
+define('DB_PASS', '');
 
 
 

@@ -4,7 +4,7 @@ document.body.onload = function() {
     container = document.getElementById("container");
     left = document.getElementById("left");
     right = document.getElementById("right");
-    container.style.width = (1200 * nbr) + "px";
+    container.style.width = (1000 * nbr) + "px";
     for (i = 1; i <= nbr; i++) {
         div = document.createElement("div");
         div.className = "photo";
@@ -17,7 +17,7 @@ document.body.onload = function() {
     var autoSlideInterval = setInterval(function() {
         if (p > -nbr + 1) {
             p--;
-            container.style.transform = "translate(" + p * 1200 + "px)";
+            container.style.transform = "translate(" + p * 1000 + "px)";
             container.style.transition = "all 1s ease";
             afficherMasquer();
         }
@@ -28,7 +28,7 @@ document.body.onload = function() {
 
         if (p > -nbr + 1) {
             p--;
-            container.style.transform = "translate(" + p * 1200 + "px)";
+            container.style.transform = "translate(" + p * 1000 + "px)";
             container.style.transition = "all 1s ease";
             afficherMasquer();
         }
@@ -39,7 +39,7 @@ document.body.onload = function() {
         
         if (p < 0) {
             p++;
-            container.style.transform = "translate(" + p * 1200 + "px)";
+            container.style.transform = "translate(" + p * 1000 + "px)";
             container.style.transition = "all 1s ease";
             afficherMasquer();
         }

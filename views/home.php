@@ -5,7 +5,7 @@
 
 
 <div class="carou">
-    <h1 class="text-light">Bienvenue sur le site de <br> l'entente CSG/USL Handball</h1>
+    <h1 class="mb-5">Bienvenue sur le site de <br> l'entente CSG/USL Handball</h1>
     <div id="carrousel">
         <div id="container">
 
@@ -17,12 +17,13 @@
 <div class="matchHomePage">
     <div class="title">
         <a href="">
-            <p class="text-light fontSize">résultats du week-end</p>
+            <p class="border border-success fontSize titleCat m-lg-4 text-lg-left text-center">résultats du <br><span>week-end</span></p>
         </a>
     </div>
     <div class="row justify-content-evenly matchs col-10 mx-auto">
         <?php
         $count = 0;
+        $matchesExist = false;
         foreach (Matchs::getAllBattles() as $battle) :
             if ($count == 3) {
                 break;
@@ -30,7 +31,7 @@
                 continue;
             }
         ?>
-            <div class="container text-center col-lg-3 col-12 m-2 containerMatchs bg-light">
+            <div class="container text-center col-lg-3 col-12 m-2 containerMatchs bg-light ">
                 <p>
                     <?= htmlspecialchars(Categories::getCategorieById($battle['cat_id'])['cat_name']); ?>
                 </p>
@@ -65,25 +66,38 @@
 
             </div>
         <?php
+            $matchesExist = true;
             $count++;
         endforeach; ?>
+        <!-- condition pour afficher un message si il n'y a pas de matchs à venir -->
+        <?php if (!$matchesExist) {
+            echo "
+           <p class=' text-center fs-2 text-bold'>Aucun Résultats ce week-end</p>";
+        } ?>
+        
+    </div>
+    <div class="text-center divBtnHome m-5">
+    <a href="#" class="text-center btnHome">Tous les résultats</a>
     </div>
 
     <div class="matchHomePage">
         <div class="title">
             <a href="">
-                <p class="text-light fontSize">Matchs à venir</p>
+                <p class="fontSize  border border-success m-lg-4 text-lg-left text-center titleCat">Matchs à venir</p>
             </a>
         </div>
         <div class="row justify-content-evenly matchs col-10  mx-auto ">
             <?php
             $count = 0;
+            $matchesExist = false;
+
             foreach (Matchs::getAllBattles() as $battle) :
                 if ($count == 3) {
                     break;
                 } else if ($battle['score_equipe1'] != null || $battle['score_equipe2'] != null) {
                     continue;
                 }
+
             ?>
 
                 <div class="container text-center col-lg-3 col-12 m-2 containerMatchs bg-light ">
@@ -118,24 +132,35 @@
                     </p>
 
                 </div>
+
             <?php
+                $matchesExist = true;
                 $count++;
             endforeach; ?>
+            <!-- condition pour afficher un message si il n'y a pas de matchs à venir -->
+            <?php if (!$matchesExist) {
+                echo "<p class=' text-center fs-2 text-bold'>Aucun match n'est prévu ce week-end</p>";
+            } ?>
         </div>
+        <div class="text-center divBtnHome m-5">
+    <a href="#" class="text-center btnHome">Tous les matchs</a>
+    </div>
     </div>
 
 </div>
-<div class="container scoreContainer">
+<div class=" ">
     <div class="title">
-        
-            <p class="text-light fontSize">nos dernières Actualités</p>
-        
+
+        <p class="fontSize  border border-success m-lg-4 text-lg-left text-center titleCat">Actualités</p>
+
     </div>
     <div class="row justify-content-evenly col-12 mx-auto">
 
 
         <?php
+        
         $count = 0;
+        $actuExist = false;
         foreach (Actu::getAllActu() as $actu) :
             if ($count == 2) {
                 break;
@@ -151,9 +176,17 @@
                 </div>
             </div>
         <?php
+            $actuExist = true;
             $count++;
         endforeach; ?>
+        <!-- condition pour afficher un message si il n'y a pas d'actus -->
+        <?php if (!$actuExist) {
+                echo "<p class='text-center fs-2 text-bold'>Aucune actus pour le moment</p>";
+            } ?>
 
+    </div>
+    <div class="text-center divBtnHome m-5">
+    <a href="#" class="text-center btnHome">Toutes les Actualités</a>
     </div>
 </div>
 <?php include "components/footer.php" ?>

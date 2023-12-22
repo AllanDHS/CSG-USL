@@ -1,7 +1,5 @@
  /* Importation fonts */
 
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
  /* Reset CSS */
 
@@ -10,16 +8,20 @@
      padding: 0;
      list-style-type: none;
      text-decoration: none;
-     font-weight: normal;
-     font-family: 'Inter', sans-serif;
+     font-family: 'Inter', sans-serif !important;
     
  }
 
  /* Body */
 
  body{
-    background-color: #0174BE !important;
+    background-color: #eeeeee !important;
  }
+
+.titleCat{
+    float: left;
+    
+}
 
 .fontSize{
     font-size: 2.2rem;
@@ -61,17 +63,18 @@
  }
 
  .carou h1 {
-     font-size: 35px;
-     margin-bottom: 20px;
+     font-size: 2.5rem;
      text-transform: uppercase;
      text-align: center;
-     font-weight: 600;
+     font-weight: 900;
+     line-height: 1.2;
+
  }
 
  #carrousel {
-     width: 1200Px;
+     width: 1000Px;
      height: 550px;
-     box-shadow: 0 0 14px rgba(0, 0, 0, 0.7);
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
      position: relative;
      overflow: hidden;
      border-radius: 10px;
@@ -79,12 +82,12 @@
  }
 
  #container {
-     width: 1200px;
+     width: 1000px;
      height: 550px;
  }
 
  .photo {
-     width: 1200px;
+     width: 1000px;
      height: 550px;
      margin: 0;
      display: inline-block;
@@ -151,7 +154,7 @@
      text-align: center;
      padding: 1rem;
      margin: 0;
-     font-weight: 900;
+     font-weight: 700;
 
  }
 
@@ -232,8 +235,39 @@
 
  }
 
+ .btnHome {
+    color: #0785D9;
+    border: #000000 solid 2px;
+    border-radius: 25px;
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: #FFF;
+    
+    
+ }
+
+    .btnHome:hover {
+        background: rgb(0,80,135);
+        background: linear-gradient(90deg, rgba(0,80,135,1) 0%, rgba(0,151,255,1) 100%);
+        color: #FFF;
+        transition: all 0.5s ease;
+        transform: scale(1.1);
+    }
+
+ .divBtnHome > a {
+     text-decoration: none;
+     color: #0785D9;
+ }
  
 
+.titleCat span {
+    float: left; 
+}
+
+.titleCat{
+    color: #0785D9;
+}
 
  .container input {
      width: 300px;
@@ -303,7 +337,8 @@
  /* Footer */
  .footer-basic {
      padding: 30px 0;
-     background-color: #0174BE;
+     background: rgb(0,80,135);
+    background: linear-gradient(90deg, rgba(0,80,135,1) 0%, rgba(0,151,255,1) 100%);
      color: #ffffff;
      border-top: 3px solid #cec9c9;
      margin-top: 10px;
@@ -372,6 +407,10 @@
 
  @media screen and (max-width:390px) {
 
+    .titleCat{
+        float: none;
+        text-align: center;
+    }
     
 
     .d-flex{
